@@ -1,23 +1,27 @@
-import { useState } from 'react'
-import Navbar from './components/Nabvar'
-import Hero from './components/Hero'
-import Journey from './components/Journey'
-import Storyline from './components/Storyline'
-import ForParents from './components/ForParents'
-import './App.css'
+import Navbar from './components/Nabvar';
+import Hero from './components/Hero';
+import Journey from './components/Journey';
+import Storyline from './components/Storyline';
+import ForParents from './components/ForParents';
+import ForSchools from './components/ForSchools';
+import Itinerary from './components/Itinerary';
+import EventDetails from './components/EventDetails';
+import Footer from './components/Footer';
 
 function App() {
-  // const [count, setCount] = useState(0)
-
   return (
-    <div className='' >
+    <>
       <Navbar />
       <Hero />
       <Journey />
       <Storyline />
       <ForParents />
-    </div>
-  )
+      <ForSchools />
+      <Itinerary />
+      <EventDetails />
+      <Footer />
+    </>
+  );
 }
 
-export default App
+export default App;
