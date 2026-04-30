@@ -1,59 +1,93 @@
+import { motion } from "framer-motion";
+
 export default function Itinerary() {
+  const schedule = [
+    {
+      time: "09:00 AM",
+      title: "The Machine Lab",
+      desc: "Dive into the silicon heart. Learn how AI thinks and build your first intelligent agent.",
+      icon: "memory",
+      color: "bg-white",
+      accent: "brand-green",
+    },
+    {
+      time: "11:30 AM",
+      title: "The Human Creative Zone",
+      desc: "Unplugged brainstorming and design thinking. Where big miracles start with a simple sketch.",
+      icon: "brush",
+      color: "bg-accent-yellow",
+      accent: "text-on-secondary-fixed",
+    },
+    {
+      time: "02:00 PM",
+      title: "The Miracle Showcase",
+      desc: "The grand stage. Demonstrating student creations to parents, mentors, and the community.",
+      icon: "celebration",
+      color: "bg-white",
+      accent: "brand-green",
+    },
+  ];
+
   return (
-    <section className="bg-brand-green py-24 px-6 md:px-16 lg:px-24">
+    <section className="bg-brand-green dark:bg-zinc-950 py-24 md:py-32 px-6 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto">
-        <h2 className="font-display text-white text-5xl text-center mb-16">
-          The Miracle Itinerary
-        </h2>
+        <div className="text-center mb-16">
+          <h2 className="font-display text-white text-5xl md:text-6xl tracking-tight">
+            The Miracle Itinerary
+          </h2>
+          <p className="text-white/70 mt-4 text-lg">
+            A full day of creativity, technology, and celebration
+          </p>
+        </div>
 
         <div className="grid lg:grid-cols-3 gap-8">
-          {/* Machine Lab */}
-          <div className="bg-white rounded-[2.5rem] p-12 flex flex-col justify-between group h-[480px] hover:scale-105 transition-transform">
-            <div>
-              <h3 className="font-display text-brand-green text-4xl mb-6">The Machine Lab</h3>
-              <p className="text-zinc-600 text-lg">
-                Dive into the silicon heart. Learn how AI thinks and build your first intelligent agent.
-              </p>
-            </div>
-            <div className="flex justify-between items-end">
-              <span className="font-medium text-zinc-400">09:00 AM</span>
-              <div className="w-16 h-16 bg-brand-green text-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                <span className="material-symbols-outlined">memory</span>
-              </div>
-            </div>
-          </div>
+          {schedule.map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: index * 0.1 }}
+              whileHover={{ y: -12, scale: 1.03 }}
+              className={`${item.color} dark:bg-zinc-900 rounded-3xl p-10 md:p-12 flex flex-col justify-between h-full min-h-[460px] shadow-xl group transition-all duration-500 border border-transparent hover:border-white/20`}
+            >
+              <div>
+                {/* Time */}
+                <div className="inline-block px-5 py-2 bg-black/10 dark:bg-white/10 text-sm font-medium rounded-full mb-8">
+                  {item.time}
+                </div>
 
-          {/* Human Creative Zone */}
-          <div className="bg-accent-yellow rounded-[2.5rem] p-12 flex flex-col justify-between group h-[480px] hover:scale-105 transition-transform">
-            <div>
-              <h3 className="font-display text-on-secondary-fixed text-4xl mb-6">The Human Creative Zone</h3>
-              <p className="text-on-secondary-fixed/80 text-lg">
-                Unplugged brainstorming and design thinking. Where big miracles start with a simple sketch.
-              </p>
-            </div>
-            <div className="flex justify-between items-end">
-              <span className="font-medium text-on-secondary-fixed/50">11:30 AM</span>
-              <div className="w-16 h-16 bg-white text-accent-yellow rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                <span className="material-symbols-outlined">brush</span>
-              </div>
-            </div>
-          </div>
+                {/* Title */}
+                <h3 className={`font-display text-4xl leading-tight mb-6 ${
+                  item.accent === "brand-green" 
+                    ? "text-brand-green dark:text-accent-yellow" 
+                    : "text-on-secondary-fixed"
+                }`}>
+                  {item.title}
+                </h3>
 
-          {/* Miracle Showcase */}
-          <div className="bg-white rounded-[2.5rem] p-12 flex flex-col justify-between group h-[480px] hover:scale-105 transition-transform">
-            <div>
-              <h3 className="font-display text-brand-green text-4xl mb-6">The Miracle Showcase</h3>
-              <p className="text-zinc-600 text-lg">
-                The grand stage. Demonstrating student creations to parents, mentors, and the community.
-              </p>
-            </div>
-            <div className="flex justify-between items-end">
-              <span className="font-medium text-zinc-400">02:00 PM</span>
-              <div className="w-16 h-16 bg-brand-green text-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                <span className="material-symbols-outlined">celebration</span>
+                {/* Description */}
+                <p className={`text-lg leading-relaxed ${
+                  item.accent === "brand-green" 
+                    ? "text-zinc-600 dark:text-zinc-400" 
+                    : "text-on-secondary-fixed/80"
+                }`}>
+                  {item.desc}
+                </p>
               </div>
-            </div>
-          </div>
+
+              {/* Icon Container */}
+              <div className="flex justify-end mt-auto pt-8">
+                <div className={`w-20 h-20 rounded-2xl flex items-center justify-center transition-transform group-hover:scale-110 shadow-inner
+                  ${item.accent === "brand-green" 
+                    ? "bg-brand-green text-white" 
+                    : "bg-white text-accent-yellow"}`}>
+                  <span className="material-symbols-outlined text-5xl">
+                    {item.icon}
+                  </span>
+                </div>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

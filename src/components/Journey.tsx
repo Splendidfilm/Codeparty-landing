@@ -1,35 +1,67 @@
+import { motion } from "framer-motion";
+
 export default function Journey() {
   const years = [
-    { year: "2022", title: "The Spark", desc: "The very first gathering of 50 curious minds in Jos city." },
-    { year: "2023", title: "Expansion", desc: "Reached 20 schools and introduced robotics workshops." },
+    { year: "2022", title: "The Spark", desc: "The very first gathering of  curious minds in Jos city." },
+    { year: "2023", title: "Expansion", desc: "Reached 20 schools and introduced coding workshops." },
     { year: "2024", title: "The Machine Lab", desc: "Launched dedicated AI-assisted creative stations for kids." },
-    { year: "2025", title: "Miracle Makers", desc: "Over 1,000 children building software solutions." },
+    { year: "2025", title: "Miracle Makers", desc: "Children building software solutions." },
   ];
 
   return (
-    <section className="bg-brand-green py-24 px-6 md:px-16 lg:px-24 overflow-hidden">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="font-display text-white text-4xl md:text-5xl mb-12 flex items-center gap-4">
-          Our Journey
-          <div className="h-1 flex-grow bg-white/20 rounded-full"></div>
-        </h2>
+    <section className="bg-brand-green dark:bg-zinc-950 py-24 md:py-32 px-6 md:px-12 lg:px-20 overflow-hidden">
+      <div className="max-w-6xl mx-auto">
+        {/* Header */}
+        <div className="flex flex-col items-center text-center mb-16">
+          <h2 className="font-display text-5xl md:text-6xl text-white dark:text-white tracking-tight">
+            Our Journey
+          </h2>
+          <p className="mt-4 text-white/80 dark:text-zinc-400 text-lg md:text-xl max-w-2xl">
+            Every miracle begins with a leap of faith
+          </p>
+          
+          {/* Decorative Line */}
+          <motion.div
+            initial={{ width: 0 }}
+            whileInView={{ width: 120 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="h-1 bg-accent-yellow mt-6 rounded-full"
+          />
+        </div>
 
-        <div className="flex overflow-x-auto gap-8 pb-8 no-scrollbar scroll-smooth">
-          {years.map((item) => (
-            <div
+        {/* Timeline Cards */}
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
+          {years.map((item, index) => (
+            <motion.div
               key={item.year}
-              className="min-w-[300px] bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-3xl group hover:bg-white hover:scale-105 transition-all duration-300"
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.15 }}
+              whileHover={{ y: -12, scale: 1.02 }}
+              className="group relative bg-white/10 dark:bg-zinc-900/70 backdrop-blur-xl border border-white/10 dark:border-white/5 rounded-3xl p-10 hover:border-accent-yellow/30 transition-all duration-500 shadow-xl"
             >
-              <span className="text-5xl font-display text-accent-yellow mb-4 block group-hover:text-brand-green">
+              {/* Year Badge */}
+              <motion.div
+                initial={{ scale: 0.8, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                transition={{ delay: 0.2 + index * 0.1 }}
+                className="inline-block bg-white dark:bg-zinc-800 text-brand-green dark:text-accent-yellow font-display text-6xl font-bold px-7 py-4 rounded-2xl shadow-inner mb-8 group-hover:rotate-3 transition-transform"
+              >
                 {item.year}
-              </span>
-              <h3 className="font-headline-md text-white mb-2 group-hover:text-zinc-900">
+              </motion.div>
+
+              {/* Content */}
+              <h3 className="text-3xl font-semibold text-white dark:text-white mb-4 group-hover:text-accent-yellow transition-colors">
                 {item.title}
               </h3>
-              <p className="font-body-md text-white/80 group-hover:text-zinc-600">
+
+              <p className="text-white/75 dark:text-zinc-400 leading-relaxed text-[17px]">
                 {item.desc}
               </p>
-            </div>
+
+              {/* Subtle bottom accent */}
+              <div className="absolute bottom-6 right-8 w-12 h-1 bg-accent-yellow/40 group-hover:bg-accent-yellow rounded-full transition-all duration-300" />
+            </motion.div>
           ))}
         </div>
       </div>
