@@ -67,7 +67,7 @@ const [modalType, setModalType] = useState<"child" | "school" | null>(null);
             {/* Main Image Container */}
             <div className="aspect-square w-full max-w-[520px] rounded-[3rem] overflow-hidden border-8 border-accent-yellow shadow-2xl shadow-black/50 rotate-[2deg] hover:rotate-0 transition-transform duration-700">
               <img
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDusTzIw2CXfsYxsx5TXUQ3924MowtvvMVKnD-OPyUvuUFMsOkrP2sEQNbE5sLcQPLXoFTqqCu_dxx7un0wY829MkY5PlvwinA75hpnhjz_9C73cE7OnHW9thtkZMFfr_VI1ubvmnzrjRj_rKrz1IEjHhRRdFxfz2-dNnyWWO4TF88SyoCDkXrJ8BeLT7UlMCU6KgN9mClTtvffuxqEuihnftBgbOgdaOYIKW8NWHEBOD26r9sEGN3JE0GcOAmDCBZiqR1KPxWZVCI"
+              src="/images/hero.png"
                 alt="Children coding happily"
                 className="w-full h-full object-cover scale-105 hover:scale-100 transition-transform duration-700"
               />
