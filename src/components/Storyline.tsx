@@ -16,7 +16,7 @@ export default function Storyline() {
           >
             <div className="relative">
               <img
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJQ-rH7QjoxRXtejXu5620C9FtcyIAPmFDvPUZm0_LAPWaHLP-KuBSjE9jLx4W5AZJBTtocps9G_d0ATQiDNoyjAFFGnNjojRRoHmZ76t-FUHrjoYGAFx1wlQ0HBENj-8XDY3mfKGCF1mRDo87lY2paRcRgd4QwdAcg8i06-AjezBpK9grg0lVFjSlRx7RBV8-zXJElRsBFltHWLNsF0FVkLBxMlJEH-2H-wWP5DxsJ4EoKwoIPjpyOwdgpoUmBM4zQ-GBPUSALzk"
+                src="/images/superhuman.png"
                 alt="Human and machine collaboration"
                 className="rounded-[3rem] shadow-2xl w-full object-cover aspect-[4/3] lg:aspect-auto"
               />
