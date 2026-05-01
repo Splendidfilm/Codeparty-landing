@@ -8,7 +8,7 @@ export default function Hero() {
 const [modalType, setModalType] = useState<"child" | "school" | null>(null);
 
   return (
-    <header className="relative overflow-hidden bg-gradient-to-br from-brand-green via-emerald-700 to-teal-800 dark:from-zinc-950 dark:via-zinc-900 dark:to-black py-20 md:py-28 lg:py-32 px-6 md:px-12 lg:px-20">
+    <header id="hero" className="relative overflow-hidden bg-gradient-to-br from-brand-green via-emerald-700 to-teal-800 dark:from-zinc-950 dark:via-zinc-900 dark:to-black py-20 md:py-28 lg:py-32 px-6 md:px-12 lg:px-20">
       
       {/* Background Pattern */}
       <div className="absolute inset-0 circuit-pattern opacity-20 dark:opacity-10 pointer-events-none" />

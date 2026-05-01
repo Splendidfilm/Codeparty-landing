@@ -9,7 +9,7 @@ export default function Journey() {
   ];
 
   return (
-    <section className="bg-brand-green dark:bg-zinc-950 py-24 md:py-32 px-6 md:px-12 lg:px-20 overflow-hidden">
+    <section id="journey" className="bg-brand-green dark:bg-zinc-950 py-24 md:py-32 px-6 md:px-12 lg:px-20 overflow-hidden">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="flex flex-col items-center text-center mb-16">

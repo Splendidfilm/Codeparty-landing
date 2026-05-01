@@ -20,7 +20,7 @@ export default function ForParents() {
   ];
 
   return (
-    <section className="bg-brand-green dark:bg-zinc-950 py-24 md:py-32 px-6 md:px-12 lg:px-20">
+    <section id="parents" className="bg-brand-green dark:bg-zinc-950 py-24 md:py-32 px-6 md:px-12 lg:px-20">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">

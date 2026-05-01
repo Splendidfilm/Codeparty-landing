@@ -20,7 +20,9 @@ const details = [
 
 export default function ForSchools() {
   return (
-    <section className="bg-white dark:bg-zinc-950 py-24 md:py-32 px-6 md:px-12 lg:px-20">
+    <section 
+    id="schools"
+    className="bg-white dark:bg-zinc-950 py-24 md:py-32 px-6 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-10 mb-16">

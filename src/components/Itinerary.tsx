@@ -29,7 +29,7 @@ export default function Itinerary() {
   ];
 
   return (
-    <section className="bg-brand-green dark:bg-zinc-950 py-24 md:py-32 px-6 md:px-12 lg:px-20">
+    <section id="itinerary" className="bg-brand-green dark:bg-zinc-950 py-24 md:py-32 px-6 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="font-display text-white text-5xl md:text-6xl tracking-tight">
