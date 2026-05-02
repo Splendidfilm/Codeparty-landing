@@ -64,7 +64,7 @@ const [modalType, setModalType] = useState<"child" | "school" | null>(null);
             </div>
             <h4 className="font-semibold text-2xl text-zinc-900 dark:text-white mb-2">Time</h4>
             <p className="text-zinc-600 dark:text-zinc-400 text-lg font-medium">
-              9:00 AM — 3:00 PM
+              9:00 AM — 1:30 PM
             </p>
             <p className="text-sm text-emerald-600 dark:text-emerald-400 mt-1">May 27, 2026</p>
           </motion.div>
