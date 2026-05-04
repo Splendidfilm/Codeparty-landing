@@ -28,7 +28,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity:1, y: 0 }}
           transition={{ ease:'easeInOut', duration:1.5 }}
-          className="font-display font-bold text-7xl md:text-9xl  leading-[1.05] text-white tracking-tighter animate-fade-in-up">
+          className="font-display font-bold text-8xl md:text-9xl  leading-[1.05] text-white text-center items-center " >
             The Civic Miracle
           </motion.h1>
 

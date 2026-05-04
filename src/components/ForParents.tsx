@@ -24,15 +24,15 @@ export default function ForParents() {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="font-display text-brand-green text-5xl md:text-6xl tracking-tight mb-6">
+          <h2 className="font-display text-brand-green text-7xl md:text-8xl tracking-tight mb-6">
             To the Parents
           </h2>
           
           <div className="max-w-2xl mx-auto space-y-3">
-            <p className="text-brand-green/90 text-xl md:text-2xl font-light">
+            <p className="text-brand-green/90 text-2xl md:text-4xl font-light">
               Raising the Architects of Tomorrow
             </p>
-            <p className="text-zin-100 text-lg md:text-xl">
+            <p className="text-zin-100 text-xl md:text-3xl">
               Moving from <span className="line-through opacity-50">Screen-Time</span> to{" "}
               <span className="text-accent-yellow font-medium">Solution-Time</span>.
             </p>
@@ -49,7 +49,7 @@ export default function ForParents() {
 
         {/* Intro Paragraph */}
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <p className="text-zinc-600/90 text-lg md:text-xl leading-relaxed">
+          <p className="text-zinc-600/90 text-lg md:text-2xl leading-relaxed">
             Your child is already a <span className="font-semibold text-brand-green">"Super Human"</span> — 
             full of curiosity, empathy, and imagination. At Codeparty 72, we introduce them to the 
             <span className="font-semibold text-accent-yellow">"Super Machine"</span> tools to amplify those gifts.
@@ -75,12 +75,12 @@ export default function ForParents() {
               </div>
 
               {/* Title */}
-              <h3 className="text-2xl font-semibold text-zinc-900 dark:text-white mb-4 group-hover:text-brand-green dark:group-hover:text-accent-yellow transition-colors">
+              <h3 className="text-3xl font-semibold text-zinc-900 dark:text-white mb-4 group-hover:text-brand-green dark:group-hover:text-accent-yellow transition-colors">
                 {benefit.title}
               </h3>
 
               {/* Description */}
-              <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed">
+              <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed text-lg ">
                 {benefit.desc}
               </p>
             </motion.div>

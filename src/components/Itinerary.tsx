@@ -32,10 +32,10 @@ export default function Itinerary() {
     <section id="itinerary" className="bg-brand-green dark:bg-zinc-950 py-24 md:py-32 px-6 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="font-display text-white text-5xl md:text-6xl tracking-tight">
+          <h2 className="font-display text-white text-6xl md:text-7xl tracking-tight">
             The Miracle Itinerary
           </h2>
-          <p className="text-white/70 mt-4 text-lg">
+          <p className="text-white/70 mt-4 text-xl">
             A full day of creativity, technology, and celebration
           </p>
         </div>
@@ -57,7 +57,7 @@ export default function Itinerary() {
                 </div>
 
                 {/* Title */}
-                <h3 className={`font-display text-4xl leading-tight mb-6 ${
+                <h3 className={`font-display text-5xl leading-tight mb-6 ${
                   item.accent === "brand-green" 
                     ? "text-brand-green dark:text-accent-yellow" 
                     : "text-on-secondary-fixed"
@@ -66,7 +66,7 @@ export default function Itinerary() {
                 </h3>
 
                 {/* Description */}
-                <p className={`text-lg leading-relaxed ${
+                <p className={`text-xl leading-relaxed ${
                   item.accent === "brand-green" 
                     ? "text-zinc-600 dark:text-zinc-400" 
                     : "text-on-secondary-fixed/80"

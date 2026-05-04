@@ -18,12 +18,9 @@ export default function Navbar() {
         
         {/* Logo */}
         <div className="flex items-center gap-3">
-          <div className="w-12 h-12 bg-brand-green rounded-2xl flex items-center justify-center  ">
-            <span className="text-white text-2xl font-bold">72</span>
-          </div>
           <div>
             <span className="font-display text-3xl font-bold tracking-tighter text-brand-green dark:text-accent-yellow">
-              codeParty<span className="text-zinc-400">.</span>26
+              CodeParty<span className="text-zinc-400">.</span>26
             </span>
           </div>
         </div>

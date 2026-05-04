@@ -45,11 +45,11 @@ export default function Storyline() {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
             className="lg:w-1/2 space-y-8"
           >
-            <h2 className="font-display text-5xl md:text-6xl leading-[1.1] tracking-tight text-zinc-900 dark:text-white">
+            <h2 className="font-display text-7xl md:text-6xl leading-[1.1] tracking-tight text-zinc-900 dark:text-white">
               The Future Isn&apos;t Just Automated—<span className="text-accent-yellow">It&apos;s Inspired.</span>
             </h2>
 
-            <div className="space-y-6 text-lg text-zinc-700 dark:text-zinc-300 leading-relaxed">
+            <div className="space-y-6 text-xl text-zinc-700 dark:text-zinc-300 leading-relaxed">
               <p>
                 For four years, we’ve coded, played, and innovated. For our 5th anniversary, 
                 we are asking a big question: What happens when the brilliance of a child 
@@ -73,7 +73,7 @@ export default function Storyline() {
               transition={{ delay: 0.3 }}
               className="p-8 bg-zinc-100 dark:bg-zinc-900/70 border-l-4 border-accent-yellow rounded-3xl"
             >
-              <p className="italic text-xl leading-relaxed text-zinc-700 dark:text-zinc-200">
+              <p className="italic text-2xl leading-relaxed text-zinc-700 dark:text-zinc-200">
                 "When we give a child a keyboard, we aren&apos;t just teaching syntax; we are giving them 
                 the wand to cast digital spells that solve real-world problems."
               </p>

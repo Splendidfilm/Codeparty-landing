@@ -27,15 +27,15 @@ export default function ForSchools() {
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-10 mb-16">
           <div className="max-w-2xl">
-            <h2 className="font-display text-5xl md:text-6xl leading-tight text-zinc-900 dark:text-white">
+            <h2 className="font-display text-6xl md:text-7xl leading-tight text-zinc-900 dark:text-white">
               Empowering the Educators of Tomorrow.
             </h2>
-            <p className="mt-4 text-accent-yellow text-2xl font-medium">
+            <p className="mt-4 text-accent-yellow text-3xl font-medium">
               Take the Classroom into the Future
             </p>
           </div>
 
-          <div className="lg:max-w-md text-zinc-600 dark:text-zinc-400 leading-relaxed">
+          <div className="lg:max-w-md text-zinc-600 dark:text-zinc-400 leading-relaxed text-lg ">
             Education is evolving. The "Civic Miracle" theme aligns with modern STEM and Social Studies curricula, 
             showing students how technology serves society and creates real impact.
           </div>
@@ -61,12 +61,12 @@ export default function ForSchools() {
               </div>
 
               {/* Headline */}
-              <h3 className="font-semibold text-3xl leading-tight mb-5">
+              <h3 className="font-semibold text-4xl leading-tight mb-5">
                 {item.headline}
               </h3>
 
               {/* Description */}
-              <p className="text-white/90 leading-relaxed">
+              <p className="text-white/90 leading-relaxed text-lg ">
                 {item.text}
               </p>
 

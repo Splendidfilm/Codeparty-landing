@@ -74,7 +74,7 @@ export default function EventDetails() {
         <div className="relative flex flex-col items-center gap-6 bg-black/50 py-10 overflow-hidden rounded-3xl  ">
 
              <div className="absolute inset-0 circuit-pattern opacity-70 pointer-events-none bg-black h-full " />
-       <div className=" space-y-4 rounded-3xl bg-white/10 backdrop-blur-lg border border-white/20 dark:border-white/5 p-8 z-10 w-4/5 flex flex-col items-center justify-around">
+       <div className=" space-y-4 rounded-3xl bg-white/10 backdrop-blur-lg border border-white/20 dark:border-white/5 p-8  w-4/5 flex flex-col items-center justify-around">
 
               <div className="flex md:flex-row items-center flex-col gap-4 w-full justify-around">
                 <RegisterChildModal/>

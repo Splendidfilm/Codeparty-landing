@@ -59,10 +59,10 @@ export default function Footer() {
               
               <div className="flex flex-col sm:flex-row gap-6 text-zinc-400">
                 <span>
-                  Philip: <span className="text-emerald-400 font-medium">+234-XXX-XXXX</span>
+                  Philip: <span className="text-emerald-400 font-medium cursor-pointer ">+2349127730659</span>
                 </span>
                 <span>
-                  Paulmike: <span className="text-emerald-400 font-medium">+234-XXX-XXXX</span>
+                  Paulmike: <span className="text-emerald-400 font-medium cursor-pointer ">+2348140534075</span>
                 </span>
               </div>
             </div>
