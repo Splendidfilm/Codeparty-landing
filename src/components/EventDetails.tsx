@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import RegistrationModal from "./RegisterModal";
+// import RegistrationModal from "./RegisterModal";
 import RegisterChildModal from "./RegisterChildbutton";
 import RegisterSchoolModal from "./RegisterSchoolbutton";
 
@@ -71,22 +71,20 @@ const [modalType, setModalType] = useState<"child" | "school" | null>(null);
         </div>
 
         {/* CTA Buttons + Note */}
-        <div className="flex flex-col items-center gap-6">
-          <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md">
-            <RegisterChildModal/>
-            <RegisterSchoolModal/>
+        <div className="relative flex flex-col items-center gap-6 bg-black/50 py-10 overflow-hidden rounded-3xl  ">
 
-          
-             <RegistrationModal
-                                    isOpen={modalType !== null}
-                                    onClose={()=> setModalType(null)}
-                                    type={modalType || "child"}
-                                    />
-          </div>
+             <div className="absolute inset-0 circuit-pattern opacity-70 pointer-events-none bg-black h-full " />
+       <div className=" space-y-4 rounded-3xl bg-white/10 backdrop-blur-lg border border-white/20 dark:border-white/5 p-8 z-10 w-4/5 flex flex-col items-center justify-around">
 
-          <p className="text-zinc-500 dark:text-zinc-400 text-sm max-w-xs">
-            Early bird registration is now open for both families and schools
+              <div className="flex md:flex-row items-center flex-col gap-4 w-full justify-around">
+                <RegisterChildModal/>
+                <RegisterSchoolModal/>
+              </div>
+
+              <p className="text-zinc-50 dark:text-zinc-400 text-sm max-w-xs">
+                Early bird registration is now open for both families and schools
           </p>
+       </div>
         </div>
       </div>
     </section>
