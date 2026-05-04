@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+// import { useState } from "react";
 // import RegistrationModal from "./RegisterModal";
 import RegisterChildModal from "./RegisterChildbutton";
 import RegisterSchoolModal from "./RegisterSchoolbutton";
 
 export default function EventDetails() {
-const [modalType, setModalType] = useState<"child" | "school" | null>(null);
+// const [modalType, setModalType] = useState<"child" | "school" | null>(null);
 
   return (
     <section className="bg-white dark:bg-zinc-950 py-24 md:py-32 px-6 md:px-12 lg:px-20">
