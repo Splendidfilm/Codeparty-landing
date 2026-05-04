@@ -60,7 +60,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
-            className="md:hidden bg-white dark:bg-zinc-950 border-t border-zinc-200 dark:border-zinc-800"
+            className="md:hidden bg-white/10 backdrop-blur-xl border-t border-zinc-200 "
           >
             <div className="flex flex-col px-6 py-8 gap-6 text-lg font-medium">
               {navLinks.map((link, index) => (
