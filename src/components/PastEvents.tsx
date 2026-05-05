@@ -3,11 +3,13 @@ import { useState, useEffect } from "react";
 type EventType = {
   year: string;
   images: string[];
+  comment?: string;
 };
 
 const events: EventType[] = [
   {
     year: "May 2022 • Jos",
+    comment:'Our very first gathering of curious minds in Jos city. A day filled with laughter, learning, and the spark of creativity that ignited our journey.',
     images: [
       "/images/2022/IMG_20220527_115139.webp",
       "/images/2022/Copy of IMG_20220527_134206.webp",
@@ -24,6 +26,7 @@ const events: EventType[] = [
   },
   {
     year: "May 2023 • Jos",
+    comment:'The Gateway to Infinite Possibilities. A day of digital inclusion, where we broke barriers and opened doors to a world of creativity and innovation for every child.',
     images: [
       "/images/2022_img(group).jpg",
       "/images/2023_img1.jpg",
@@ -32,6 +35,7 @@ const events: EventType[] = [
   },
   {
     year: "May 2024 • Jos",
+    comment:'Launched dedicated AI-assisted creative stations for kids. A day where technology met imagination, empowering our young builders to create with the help of AI and take their ideas to new heights.',
     images: [
       "/images/2022_img(group).jpg",
       "/images/2024_img1.jpg",
@@ -41,6 +45,7 @@ const events: EventType[] = [
   },
   {
     year: "May 2025 • Jos",
+    comment:'Starting Jos Early. A day of digital leverage, where we equipped our young innovators with the tools and knowledge to shape the future of our city and beyond.',
     images: [
       "/images/2022_img(group).jpg",
       "/images/2025_img1.jpg",
@@ -112,9 +117,10 @@ export default function PastEvents() {
                   alt={event.year}
                   className="w-full h-72 object-cover group-hover:scale-105 transition"
                 />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent h-1/3"></div>
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent h-1/3"></div>
                 <div className="absolute bottom-4 left-4 text-white">
-                  <p className="text-sm">{event.year}</p>
+                  <p className="text-base font-semibold ">{event.year}</p>
+                  <p className="text-sm text-zinc-200">{event.comment}</p>
                 </div>
               </div>
             </div>
@@ -136,9 +142,9 @@ export default function PastEvents() {
             {/* LEFT */}
             <button
               onClick={prevImage}
-              className="absolute left-6 text-white text-4xl"
-            >
-              ‹
+              className="absolute left-6 text-white text-4xl p-1 bg-black/60 rounded-xl material-symbols-outlined active:opacity-90 transition-all "
+            >   
+              arrow_left
             </button>
 
             {/* IMAGE */}
@@ -151,9 +157,9 @@ export default function PastEvents() {
             {/* RIGHT */}
             <button
               onClick={nextImage}
-              className="absolute right-6 text-white text-4xl"
+              className="absolute right-6 text-white text-4xl p-1 bg-black/60 rounded-xl material-symbols-outlined active:opacity-90 transition-all"
             >
-              ›
+            arrow_right
             </button>
           </div>
         )}

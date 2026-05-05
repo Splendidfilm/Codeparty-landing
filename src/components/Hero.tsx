@@ -39,7 +39,7 @@ export default function Hero() {
           className=" flex flex-col items-center space-x-2 font-display text-3xl md:text-5xl lg:text-[54px] leading-tight text-white/95 " >
 
               <span className="font-semibold  " >Super Human</span>
-            <span className="text-zinc-200" >x</span>
+            <span className="text-zinc-200 font-semibold" >✕</span>
             <span className=" text-zinc-100 " > Super Machine</span>
 
           </motion.div>
