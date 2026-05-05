@@ -45,7 +45,7 @@ export default function Storyline() {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
             className="lg:w-1/2 space-y-8"
           >
-            <h2 className="font-display text-7xl md:text-6xl leading-[1.1] tracking-tight text-zinc-900 dark:text-white">
+            <h2 className="font-display text-5xl md:text-6xl leading-[1.1] tracking-tight text-zinc-900 dark:text-white">
               The Future Isn&apos;t Just Automated—<span className="text-accent-yellow">It&apos;s Inspired.</span>
             </h2>
 

@@ -13,9 +13,9 @@ export default function Journey() {
       <div className="max-w-6xl mx-auto bg_hero ">
         {/* Header */}
         <div className="flex flex-col items-center text-center mb-16">
-          <h2 className="font-display text-7xl md:text-8xl font-bold lg:text-[54px] leading-tight text-brand-green/95 items-center " >
+          <h2 className="font-display text-4xl md:text-8xl font-bold lg:text-[54px] leading-tight text-brand-green/95 items-center " >
          Our Journey to 
-        <span className="text-accent-yellow relative inline-block ml-1" >
+        <span className="text-accent-yellow relative inline-block ml-1  " >
          "Civic Miracle"
          <motion.span 
          initial={{ width: 0 }}

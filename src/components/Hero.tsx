@@ -28,7 +28,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity:1, y: 0 }}
           transition={{ ease:'easeInOut', duration:1.5 }}
-          className="font-display font-bold text-8xl md:text-9xl  leading-[1.05] text-white text-center items-center " >
+          className="font-display font-bold text-7xl md:text-9xl  leading-[1.05] text-white text-center items-center " >
             The Civic Miracle
           </motion.h1>
 
@@ -36,7 +36,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity:1, y:0 }}
           transition={{ ease:'easeInOut', duration:1.5, delay:0.3 }}
-          className=" flex flex-row md:flex-col items-center space-x-2 font-display text-4xl md:text-5xl lg:text-[54px] leading-tight text-white/95 " >
+          className=" flex flex-col items-center space-x-2 font-display text-3xl md:text-5xl lg:text-[54px] leading-tight text-white/95 " >
 
               <span className="font-semibold  " >Super Human</span>
             <span className="text-zinc-200" >x</span>
@@ -45,7 +45,7 @@ export default function Hero() {
           </motion.div>
 
 
-          <h2 className="font-display text-3xl md:text-4xl lg:text-[44px] leading-tight text-white/95 items-center " >
+          <h2 className="font-display text-3xl md:text-4xl lg:text-[44px] leading-tight text-white/95 items-centern text-center " >
          Where Little Hands Build Big  
         <span className="text-accent-yellow relative inline-block ml-1" >
          "Miracles."
@@ -61,7 +61,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: -5 }}
             whileInView={{ opacity:1, x:0 }}
             transition={{ ease:'backInOut', duration:0.5, delay:2 }}
-            className="text-xl md:text-2xl text-white/90 max-w-lg animate-fade-in-up animation-delay-300">
+            className="text-xl md:text-2xl text-white/90 max-w-lg animate-fade-in-up animation-delay-300 text-center">
              Celebrate Children's Day at the <strong className="text-brand-green text"  >5th Annual Codeplay72 Codeparty</strong>.<br />
              A day of magic, logic, and limitless imagination.
            </motion.p>

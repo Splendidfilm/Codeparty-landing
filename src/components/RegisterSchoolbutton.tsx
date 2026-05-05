@@ -11,7 +11,7 @@ export default function RegisterSchoolButton() {
     <motion.button
               // whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.97 }}
-              className="bg-brand-green hover:bg-emerald-700 text-white font-semibold text-xl px-14 py-6 rounded-2xl  shadow-brand-green/30  transition-all shadow-lg  flex-1 t active:scale-90  group flex items-center justify-center gap-3"
+              className="bg-brand-green hover:bg-emerald-700 text-white font-semibold text-lg md:text-xl px-14 py-6 rounded-2xl  shadow-brand-green/30  transition-all shadow-lg  flex-1 t active:scale-90  group flex items-center justify-center gap-3"
               // onClick={()=> setModalType('school')}
             >
               Register My School

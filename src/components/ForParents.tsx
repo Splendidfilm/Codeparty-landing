@@ -24,7 +24,7 @@ export default function ForParents() {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="font-display text-brand-green text-7xl md:text-8xl tracking-tight mb-6">
+          <h2 className="font-display text-brand-green text-6xl md:text-8xl tracking-tight mb-6">
             To the Parents
           </h2>
           

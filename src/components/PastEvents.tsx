@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 type EventType = {
   year: string;
@@ -9,32 +9,17 @@ const events: EventType[] = [
   {
     year: "May 2022 • Jos",
     images: [
-      "/images/2022_img(group).jpg",
-      "/images/2022/IMG_20220527_115125.jpg",
-      "/images/2022/IMG_20220527_115132.jpg",
-      "/images/2022/IMG_20220527_115139.jpg",
-      "/images/2022/IMG_20220527_115157.jpg",
-      "/images/2022/IMG_20220527_115200.jpg",
-      "/images/2022/IMG_20220527_115207.jpg",
-      "/images/2022/IMG_20220527_115210.jpg",
-      "/images/2022/IMG_20220527_115217.jpg",
-      "/images/2022/IMG_20220527_115234.jpg",
-      "/images/2022/IMG_20220527_115302.jpg",
-      "/images/2022/IMG_20220527_115304.jpg",
-      "/images/2022/IMG_20220527_115314.jpg",
-      "/images/2022/IMG_20220527_140012.jpg",
-      "/images/2022/IMG_20220527_144522.jpg",
-      "/images/2022/IMG_20220527_144724.jpg",
-      "/images/2022/IMG_20220527_144735.jpg",
-      "/images/2022/IMG_20220527_125206.jpg",
-      "/images/2022/IMG_20220527_125217.jpg",
-      "/images/2022/IMG-20220527-WA0029.jpg",
-      "/images/2022/IMG_20220527_125246.jpg",
-      "/images/2022/IMG_20220527_144903.jpg",
-      "/images/2022/IMG_20220527_144903.jpg",
-      "/images/2022/IMG_20220527_115327.jpg",
-      "/images/2022/IMG_20220527_134153.jpg",
-      "/images/2022/IMG_20220527_144522.jpg",
+      "/images/2022/IMG_20220527_115139.webp",
+      "/images/2022/Copy of IMG_20220527_134206.webp",
+      "/images/2022/IMG_20220527_115210.webp",
+      "/images/2022/IMG_20220527_115318.webp",
+      "/images/2022/IMG_20220527_140012.webp",
+      "/images/2022/IMG_20220527_144522.webp",
+      "/images/2022/IMG_20220527_144903.webp",
+      "/images/2022/IMG_20220527_145305.webp",
+
+
+
     ],
   },
   {
@@ -50,6 +35,7 @@ const events: EventType[] = [
     images: [
       "/images/2022_img(group).jpg",
       "/images/2024_img1.jpg",
+      "/images/2022_img(group).jpg",
       "/images/2024_img2.jpg",
     ],
   },
@@ -93,6 +79,14 @@ export default function PastEvents() {
         : prev - 1
     );
   };
+
+  useEffect(() => {
+  if (!selectedEvent) return;
+
+  const nextIndex = (currentIndex + 1) % selectedEvent.images.length;
+  const img = new Image();
+  img.src = selectedEvent.images[nextIndex];
+}, [currentIndex, selectedEvent]);
 
   return (
     <section className="py-20 bg-white">
