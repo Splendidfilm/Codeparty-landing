@@ -46,9 +46,9 @@ export default function Hero() {
 
 
           <h2 className="font-display text-3xl md:text-4xl lg:text-[44px] leading-tight text-white/95 items-centern text-center " >
-         Where Little Hands Build Big  
+         Where Little Hands Build   
         <span className="text-accent-yellow relative inline-block ml-1" >
-         "Miracles."
+         "Big Miracles."
          <motion.span 
          initial={{ width: 0 }}
         whileInView={{ width: '100%' }}
