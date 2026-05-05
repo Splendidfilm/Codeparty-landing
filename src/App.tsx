@@ -7,6 +7,7 @@ import ForSchools from './components/ForSchools';
 import Itinerary from './components/Itinerary';
 import EventDetails from './components/EventDetails';
 import Footer from './components/Footer';
+import PastEvents from './components/PastEvents';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Journey />
       <Storyline />
       <ForParents />
+      <PastEvents />
       <ForSchools />
       <Itinerary />
       <EventDetails />

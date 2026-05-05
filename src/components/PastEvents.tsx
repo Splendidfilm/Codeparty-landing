@@ -1,0 +1,169 @@
+import { useState } from "react";
+
+type EventType = {
+  year: string;
+  images: string[];
+};
+
+const events: EventType[] = [
+  {
+    year: "May 2022 • Jos",
+    images: [
+      "/images/2022_img(group).jpg",
+      "/images/2022/IMG_20220527_115125.jpg",
+      "/images/2022/IMG_20220527_115132.jpg",
+      "/images/2022/IMG_20220527_115139.jpg",
+      "/images/2022/IMG_20220527_115157.jpg",
+      "/images/2022/IMG_20220527_115200.jpg",
+      "/images/2022/IMG_20220527_115207.jpg",
+      "/images/2022/IMG_20220527_115210.jpg",
+      "/images/2022/IMG_20220527_115217.jpg",
+      "/images/2022/IMG_20220527_115234.jpg",
+      "/images/2022/IMG_20220527_115302.jpg",
+      "/images/2022/IMG_20220527_115304.jpg",
+      "/images/2022/IMG_20220527_115314.jpg",
+      "/images/2022/IMG_20220527_140012.jpg",
+      "/images/2022/IMG_20220527_144522.jpg",
+      "/images/2022/IMG_20220527_144724.jpg",
+      "/images/2022/IMG_20220527_144735.jpg",
+      "/images/2022/IMG_20220527_125206.jpg",
+      "/images/2022/IMG_20220527_125217.jpg",
+      "/images/2022/IMG-20220527-WA0029.jpg",
+      "/images/2022/IMG_20220527_125246.jpg",
+      "/images/2022/IMG_20220527_144903.jpg",
+      "/images/2022/IMG_20220527_144903.jpg",
+      "/images/2022/IMG_20220527_115327.jpg",
+      "/images/2022/IMG_20220527_134153.jpg",
+      "/images/2022/IMG_20220527_144522.jpg",
+    ],
+  },
+  {
+    year: "May 2023 • Jos",
+    images: [
+      "/images/2022_img(group).jpg",
+      "/images/2023_img1.jpg",
+      "/images/2023_img2.jpg",
+    ],
+  },
+  {
+    year: "May 2024 • Jos",
+    images: [
+      "/images/2022_img(group).jpg",
+      "/images/2024_img1.jpg",
+      "/images/2024_img2.jpg",
+    ],
+  },
+  {
+    year: "May 2025 • Jos",
+    images: [
+      "/images/2022_img(group).jpg",
+      "/images/2025_img1.jpg",
+      "/images/2025_img2.jpg",
+    ],
+  },
+];
+
+export default function PastEvents() {
+  const [selectedEvent, setSelectedEvent] = useState<EventType | null>(null);
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+
+  const openModal = (event: EventType) => {
+    setSelectedEvent(event);
+    setCurrentIndex(0);
+  };
+
+  const closeModal = () => {
+    setSelectedEvent(null);
+  };
+
+  const nextImage = () => {
+    if (!selectedEvent) return;
+
+    setCurrentIndex((prev) =>
+      (prev + 1) % selectedEvent.images.length
+    );
+  };
+
+  const prevImage = () => {
+    if (!selectedEvent) return;
+
+    setCurrentIndex((prev) =>
+      prev === 0
+        ? selectedEvent.images.length - 1
+        : prev - 1
+    );
+  };
+
+  return (
+    <section className="py-20 bg-white">
+      <div className="max-w-6xl mx-auto px-6">
+
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-gray-900 mb-3">
+            Past CodeParty Moments
+          </h2>
+        </div>
+
+        {/* GRID */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {events.map((event, index) => (
+            <div
+              key={index}
+              onClick={() => openModal(event)}
+              className="cursor-pointer group overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition"
+            >
+              <div className="relative">
+                <img
+                  src={event.images[0]}
+                  alt={event.year}
+                  className="w-full h-72 object-cover group-hover:scale-105 transition"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent h-1/3"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <p className="text-sm">{event.year}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* MODAL */}
+        {selectedEvent && (
+          <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
+
+            {/* CLOSE */}
+            <button
+              onClick={closeModal}
+              className="absolute top-6 right-6 text-white text-3xl"
+            >
+              ✕
+            </button>
+
+            {/* LEFT */}
+            <button
+              onClick={prevImage}
+              className="absolute left-6 text-white text-4xl"
+            >
+              ‹
+            </button>
+
+            {/* IMAGE */}
+            <img
+              src={selectedEvent.images[currentIndex]}
+              alt="event"
+              className="max-h-[80vh] rounded-xl"
+            />
+
+            {/* RIGHT */}
+            <button
+              onClick={nextImage}
+              className="absolute right-6 text-white text-4xl"
+            >
+              ›
+            </button>
+          </div>
+        )}
+      </div>
+    </section>
+  );
+}

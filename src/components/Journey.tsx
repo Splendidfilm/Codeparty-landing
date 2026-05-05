@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function Journey() {
   const years = [
-    { year: "2022", title: "The Spark", desc: "The very first gathering of  curious minds in Jos city.",url:"/images/hero.png" },
+    { year: "2022", title: "The Spark", desc: "The very first gathering of  curious minds in Jos city.",url:"/images/2022_img(kenny).jpg" },
     { year: "2023", title: "Digital Inclusion", desc: "The Gateway to Infinite Possibilities",url:"/images/hero.png" },
     { year: "2024", title: "Bold Builders", desc: "Launched dedicated AI-assisted creative stations for kids.",url:"/images/hero.png"  },
     { year: "2025", title: "Digital Leverage", desc: "Starting Jos Early.",url:"/images/hero.png" },
@@ -42,26 +42,27 @@ export default function Journey() {
               initial={{ opacity: 0, x: -10 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6,ease:'easeInOut' }}
-              // whileHover={{ y: -12, scale: 1.02 }}
-              className=" h-full group relative bg-white backdrop-blur-xl border border-zinc-200 rounded-3xl  transition-all duration-500 shadow-xl flex flex-col md:flex-col items-center  justify-center space-y-6 md:space-y-0 w-4/5  md:w-full  overflow-hidden  "
+              whileHover={{ y: -12, scale: 1.02, boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)' }}
+              className=" h-full group relative bg-gradient-to-br from-white to-gray-50 backdrop-blur-xl border border-zinc-200/50 rounded-3xl transition-all duration-500 shadow-2xl hover:shadow-3xl flex flex-col md:flex-col items-center justify-center space-y-6 md:space-y-0 w-4/5 md:w-full overflow-hidden "
             >
-<div className="flex flex-col space-y-4 h-full p-6  items-center justify-center">
+<div className="flex flex-col space-y-4 h-full p-6 items-center justify-center">
               {/* Year Badge */}
                 <motion.div
                 initial={{ scale: 0.8, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 1 }}
                 transition={{ delay: 0.2 }}
-                className=" bg-white  text-brand-green dark:text-accent-yellow font-display text-7xl font-bold px-7 py-4 rounded-xl shadow-inner mb-8 transition-transform w-fit self-center  "
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                className=" bg-gradient-to-r from-brand-green to-accent-yellow text-white font-display text-7xl font-bold px-7 py-4 rounded-xl shadow-inner mb-8 transition-transform w-fit self-center "
               >
                 {item.year}
               </motion.div>
 
               {/* Content */}
-              <h3 className="text-5xl font-semibold text-accent-yellow text-center  mb-4 transition-colors">
+              <h3 className="text-5xl font-semibold text-accent-yellow text-center mb-4 transition-colors group-hover:text-brand-green">
                 {item.title}
               </h3>     
 
-              <p className=" text-brand-green/80 leading-relaxed text-2xl text-center w-full  ">
+              <p className=" text-brand-green/80 leading-relaxed text-2xl text-center w-full group-hover:text-brand-green/90">
                 {item.desc}
               </p>
 </div>
@@ -71,10 +72,7 @@ export default function Journey() {
                transition={{ duration:0.5,}}
                src={item.url} 
                alt="children"
-                className="  h-full
-                
-                w-full object-cover object-top rounded-tl-3xl rounded-tr-3xl md:rounded-tr-none md:
-                rounded-b-3xl transition-all " />
+                className=" h-full w-full object-cover object-top rounded-tl-3xl rounded-tr-3xl md:rounded-tr-none md:rounded-b-3xl transition-all group-hover:brightness-110 " />
             
             </motion.div>
           ))}
