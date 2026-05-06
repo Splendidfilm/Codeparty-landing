@@ -13,16 +13,16 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="sticky w-full top-0 z-10 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-xl border-b border-zinc-200 dark:border-zinc-800">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 py-5 flex justify-between items-center">
+    <nav className="sticky w-full h-24  top-0 z-10 bg-white/80 backdrop-blur-xl border-b border-zinc-200  ">
+      <div className="max-w-7xl mx-auto px-6 md:px-12  flex justify-between items-center">
         
         {/* Logo */}
-        <div className="flex items-center gap-3">
-          <img className='w-20 rounded-full' src="/Logo.png" alt="Codeparty_Logo" />
+        <div className="flex  items-center justify-center gap-3">
+          <img className='  w-24 rounded-full' src="/Logo.png" alt="Codeparty_Logo" />
           <div className='' >
 
 
-            <span className="font-display text-3xl font-bold tracking-tighter text-zinc-800 dark:text-accent-yellow">
+            <span className="font-display  text-3xl font-bold tracking-tighter text-zinc-800 dark:text-accent-yellow">
               CodeParty<span className="text-brand-green">.26</span>
             </span>
           </div>
@@ -63,7 +63,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
-            className="md:hidden bg-white/10 backdrop-blur-xl border-t border-zinc-200 "
+            className="md:hidden bg-white backdrop-blur-xl border-b border-t border-zinc-200 "
           >
             <div className="flex flex-col px-6 py-8 gap-6 text-lg font-medium">
               {navLinks.map((link, index) => (

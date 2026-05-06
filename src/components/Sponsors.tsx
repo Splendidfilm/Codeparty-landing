@@ -11,7 +11,7 @@ const sponsors: Sponsor[] = [
   { name: 'Better Earth Foundation', logo: '/images/betterEarth.jpg' },
   { name: 'Stanford University', logo: '/images/stanford.png' },
   { name: 'CSFirst', logo: '/Logo.png' },
-  { name: 'Google', logo: '/Logo.png' },
+  { name: 'Google', logo: '/images/google.png' },
 ];
 
 export default function Sponsors() {
