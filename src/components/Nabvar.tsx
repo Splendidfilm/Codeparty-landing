@@ -22,7 +22,7 @@ export default function Navbar() {
           <div className='' >
 
 
-            <span className="font-display  text-3xl font-bold tracking-tighter text-zinc-800 dark:text-accent-yellow">
+            <span className="font-display hidden md:block  text-3xl font-bold tracking-tighter text-zinc-800 dark:text-accent-yellow">
               CodeParty<span className="text-brand-green">.26</span>
             </span>
           </div>
