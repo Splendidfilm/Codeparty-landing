@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function Storyline() {
   return (
-    <section className="bg-white dark:bg-zinc-950 py-24 md:py-32 px-6 md:px-12 lg:px-20 transition-colors overflow-hidden">
+    <section className= " w-full bg-white dark:bg-zinc-950 py-24 md:py-32 px-6 md:px-12 lg:px-20 transition-colors overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-20 items-center">
           

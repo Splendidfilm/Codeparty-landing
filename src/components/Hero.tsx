@@ -9,7 +9,7 @@ export default function Hero() {
 // const [modalType, setModalType] = useState<"child" | "school" | null>(null);
 
   return (
-    <header id="hero" className=" relative overflow-hidden py-20 md:py-28 hero_bg bg-cover flex items-center justify-around space-y-10 flex-col ">
+    <header id="hero" className=" relative overflow-hidden py-20 md:py-28 hero_bg bg-cover flex items-center justify-around space-y-10 flex-col w-full ">
 
 
       

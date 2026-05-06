@@ -8,10 +8,12 @@ import Itinerary from './components/Itinerary';
 import EventDetails from './components/EventDetails';
 import Footer from './components/Footer';
 import PastEvents from './components/PastEvents';
+import Sponsors from './components/Sponsors';
+
 
 function App() {
   return (
-    <>
+    <div className=' flex flex-col items-center ' >
       <Navbar />
       <Hero />
       <Journey />
@@ -20,10 +22,11 @@ function App() {
       <PastEvents />
       <ForSchools />
       <Itinerary />
+      <Sponsors/>
       <EventDetails />
       <Footer />
       
-    </>
+    </div>
   );
 }
 

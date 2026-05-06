@@ -18,9 +18,12 @@ export default function Navbar() {
         
         {/* Logo */}
         <div className="flex items-center gap-3">
-          <div>
-            <span className="font-display text-3xl font-bold tracking-tighter text-brand-green dark:text-accent-yellow">
-              CodeParty<span className="text-zinc-400">.</span>26
+          <img className='w-20 rounded-full' src="/Logo.png" alt="Codeparty_Logo" />
+          <div className='' >
+
+
+            <span className="font-display text-3xl font-bold tracking-tighter text-zinc-800 dark:text-accent-yellow">
+              CodeParty<span className="text-brand-green">.26</span>
             </span>
           </div>
         </div>

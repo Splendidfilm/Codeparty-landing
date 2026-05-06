@@ -8,7 +8,7 @@ export default function EventDetails() {
 // const [modalType, setModalType] = useState<"child" | "school" | null>(null);
 
   return (
-    <section className="bg-white dark:bg-zinc-950 py-24 md:py-32 px-6 md:px-12 lg:px-20">
+    <section className="bg-white dark:bg-zinc-950 py-24 md:py-32 px-6 md:px-12 lg:px-20 w-full ">
       <div className="max-w-5xl mx-auto text-center">
         
         {/* Badge */}
@@ -21,7 +21,7 @@ export default function EventDetails() {
           Event Details
         </motion.div>
 
-        <h2 className="font-display text-5xl md:text-6xl text-zinc-900 dark:text-white mb-16 tracking-tight">
+        <h2 className="font-display text-5xl md:text-6xl text-zinc-900  mb-16 tracking-tight">
           Let’s Make It Happen
         </h2>
 
@@ -64,7 +64,7 @@ export default function EventDetails() {
             </div>
             <h4 className="font-semibold text-2xl text-zinc-900 dark:text-white mb-2">Time</h4>
             <p className="text-zinc-600 dark:text-zinc-400 text-lg font-medium">
-              9:00 AM — 1:30 PM
+              9:00 AM — 3:30 PM
             </p>
             <p className="text-sm text-emerald-600 dark:text-emerald-400 mt-1">May 27, 2026</p>
           </motion.div>

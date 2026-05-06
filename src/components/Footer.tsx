@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function Footer() {
   return (
-    <footer className="bg-zinc-950 text-white py-20 md:py-28 px-6 border-t border-zinc-800">
+    <footer className="bg-zinc-950 text-white py-20 md:py-28 px-6 border-t border-zinc-800 w-full ">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col items-center text-center">
           

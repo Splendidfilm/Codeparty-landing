@@ -1,3 +1,66 @@
+import jsPDF from "jspdf";
+
+const downloadSchedulePDF = () => {
+  const pdf = new jsPDF();
+
+  // 🎨 Header background
+  pdf.setFillColor(23, 207, 57); // deep blue
+  pdf.rect(0, 0, 210, 30, "F");
+
+  // 🖼 Logo
+  pdf.addImage("/Logo.png", "PNG", 15, 5, 20, 20);
+
+  // 📝 Title
+  pdf.setTextColor(255, 255, 255);
+  pdf.setFontSize(16);
+  pdf.text("CodeParty Event Schedule", 40, 18);
+
+  let y = 40;
+
+  schedule.forEach((item) => {
+    // Title
+    pdf.setTextColor(0, 0, 0);
+    pdf.setFont("helvetica", "bold");
+    pdf.text(`${item.time} — ${item.title}`, 20, y);
+    y += 6;
+
+    pdf.setFont("helvetica", "normal");
+    pdf.setTextColor(50, 50, 50);
+
+    // Description
+    if (item.description) {
+      const text = pdf.splitTextToSize(item.description, 160);
+      pdf.text(text, 25, y);
+      y += text.length * 5;
+    }
+
+    // Speaker
+    if (item.speaker) {
+      pdf.text(`Speaker: ${item.speaker}`, 25, y);
+      y += 5;
+    }
+
+    // Room
+    if (item.room) {
+      pdf.text(`Room: ${item.room}`, 25, y);
+      y += 5;
+    }
+
+    // Divider
+    pdf.setDrawColor(200, 200, 200);
+    pdf.line(20, y, 190, y);
+    y += 8;
+
+    // New page if needed
+    if (y > 280) {
+      pdf.addPage();
+      y = 20;
+    }
+  });
+
+  pdf.save("CodeParty-Schedule.pdf");
+};
+
 type ScheduleItem = {
   time: string;
   title: string;
@@ -92,12 +155,23 @@ export default function EventSchedule() {
   };
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className=" w-full py-20 bg-gray-50">
       <div className="max-w-4xl mx-auto px-6">
 
-        <h2 className="text-3xl font-bold mb-10 text-center">
+        <h2 className="text-5xl md:text-6xl font-bold mb-10 text-center text-brand-green">
           Event Schedule
         </h2>
+
+    <div className=" flex my-10 items-center justify-around text-center">
+
+        
+        <button
+  onClick={downloadSchedulePDF}
+  className="mt-8 px-6 py-3 bg-zinc-900 text-white rounded-xl hover:bg-zinc-700 shadow-lg hover:shadow-xl active:scale-95 transition-all  flex items-center gap-2"
+>
+  Download Schedule <span className="material-symbols-outlined" >download</span>
+</button>
+    </div>
 
         <div className="space-y-5">
           {schedule.map((item, index) => {
@@ -106,12 +180,12 @@ export default function EventSchedule() {
             return (
               <div
                 key={index}
-                className="bg-white rounded-2xl shadow-md overflow-hidden transition"
-              >
+                className="bg-white rounded-2xl shadow-md overflow-hidden transition py-5 "
+              >  
                 {/* CLICKABLE HEADER */}
                 <div
                   onClick={() => toggle(index)}
-                  className="cursor-pointer p-5 flex justify-between items-center hover:bg-gray-50"
+                  className="cursor-pointer p-5 flex justify-between items-center"
                 >
                   <div>
                     <p className="text-sm text-brand-green font-semibold">
@@ -123,9 +197,10 @@ export default function EventSchedule() {
                   </div>
 
                   {/* ICON */}
-                  <span className="text-2xl">
+                  <span className={!isOpen ? "text-2xl text-white w-14 h-14 flex items-center justify-center text-center p-4  shadow-md transition-all  rounded-full bg-brand-green " : "text-2xl text-white w-10 h-10 flex items-center justify-center text-center p-4  shadow-md transition-all  rounded-full bg-zinc-900 " }>
                     {isOpen ? "−" : "+"}
                   </span>
+                  
                 </div>
 
                 {/* EXPANDED CONTENT */}
