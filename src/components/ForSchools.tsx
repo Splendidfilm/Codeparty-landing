@@ -27,7 +27,7 @@ export default function ForSchools() {
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-10 mb-16">
           <div className="max-w-2xl">
-            <h2 className="font-display text-6xl md:text-7xl leading-tight text-zinc-900 dark:text-white">
+            <h2 className="font-display text-5xl md:text-7xl leading-tight text-zinc-900 dark:text-white">
               Empowering the Educators of Tomorrow.
             </h2>
             <p className="mt-4 text-accent-yellow text-3xl font-medium">
