@@ -56,9 +56,9 @@ export default function Sponsors() {
               </div>
 
               {/* Bold Name */}
-              <p className="text-base md:text-lg font-semibold text-zinc-800 text-center leading-tight tracking-tight px-4">
+              {/* <p className="text-base md:text-lg font-semibold text-zinc-800 text-center leading-tight tracking-tight px-4">
                 {sponsor.name}
-              </p>
+              </p> */}
             </motion.div>
           ))}
         </div>
