@@ -46,7 +46,7 @@ export default function Sponsors() {
             >
               {/* Extra Large Logo Container */}
               <div className="relative w-44 h-44 md:w-52 md:h-52 lg:w-56 lg:h-56 flex items-center justify-center 
-                              bg-zinc-50 rounded-3xl border border-zinc-100 
+                               rounded-3xl border border-zinc-100 
                               group-hover:border-brand-green/30 transition-all duration-300 overflow-hidden shadow-sm">
                 <img
                   src={sponsor.logo}
