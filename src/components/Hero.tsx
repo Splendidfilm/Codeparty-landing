@@ -28,43 +28,27 @@ export default function Hero() {
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity:1, y: 0 }}
           transition={{ ease:'easeInOut', duration:1.5 }}
-          className="font-display font-bold text-7xl md:text-9xl  leading-[1.05] text-white text-center items-center " >
-            The Civic Miracle
+          className=" text-7xl md:text-9xl  text-center items-center font-['Bebas_Neue'] font-semibold text-[72px] leading-[0.95] text-white tracking-wider mt-6 " >
+            The Civic<br />Miracle
           </motion.h1>
 
-          <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity:1, y:0 }}
-          transition={{ ease:'easeInOut', duration:1.5, delay:0.3 }}
-          className=" flex flex-col items-center space-x-2 font-display text-3xl md:text-5xl lg:text-[54px] leading-tight text-white/95 " >
-
-              <span className="font-semibold  " >Super Human</span>
-            <span className="text-zinc-200 font-semibold" >✕</span>
-            <span className=" text-zinc-100 " > Super Machine</span>
-
-          </motion.div>
+        <div className="flex items-center gap-4 mt-4">
+        <span className="font-['Lora'] text-[22px] font-semibold text-white/90">Super Human</span>
+        <span className="font-['Bebas_Neue'] text-xl text-zinc-300 bg-[#2d7a45]/30 w-8 h-8 flex items-center justify-center rounded-lg">✕</span>
+        <span className="font-['Lora'] text-[22px] font-semibold text-white/90">Super Machine</span>
+      </div>
 
 
-          <h2 className="font-display text-3xl md:text-4xl lg:text-[44px] leading-tight text-white/95 items-centern text-center " >
-         Where Little Hands Build   
-        <span className="text-accent-yellow relative inline-block ml-1" >
-         "Big Miracles."
-         <motion.span 
-         initial={{ width: 0 }}
-        whileInView={{ width: '100%' }}
-        transition={{ ease:'backInOut', duration:1.5, delay:1.5 }}
-      
-         className="absolute -bottom-2 left-0 w-full h-1 bg-zinc-100/70 rounded-full transition-all " />
-         </span>
-       </h2>
-            <motion.p 
-            initial={{ opacity: 0, x: -5 }}
-            whileInView={{ opacity:1, x:0 }}
-            transition={{ ease:'backInOut', duration:0.5, delay:2 }}
-            className="text-xl md:text-2xl text-white/90 max-w-lg animate-fade-in-up animation-delay-300 text-center">
-             Celebrate Children's Day at the <strong className="text-brand-green text"  >5th Annual Codeplay72 Codeparty</strong>.<br />
-             A day of magic, logic, and limitless imagination.
-           </motion.p>
+         {/* Tagline */}
+      <p className="font-['Lora'] text-[22px] text-white/85 mt-6">
+        Where little hands build <span className="text-[#e8a020] italic relative inline-block after:absolute after:bottom-[-3px] after:left-0 after:w-full after:h-[2px] after:bg-white/30 text- text-shadow-xs ">“Big Miracles.”</span>
+      </p>
+
+      {/* Subtitle */}
+      <p className="font-['Lora'] text-center italic text-white/75 max-w-[420px] leading-relaxed mt-6 text-2xl ">
+        Celebrate Children&apos;s Day at the <br/> <strong className="font-semibold not-italic text-[#2d7a45]  ">5th Annual Codeplay72 CodeParty</strong>.<br />
+        A day of magic, logic, and limitless imagination.
+      </p>
 
 
  {/* Date Badge */}

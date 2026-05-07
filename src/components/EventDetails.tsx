@@ -22,7 +22,7 @@ export default function EventDetails() {
         </motion.div>
 
         <h2 className="font-display text-5xl md:text-6xl text-zinc-900  mb-16 tracking-tight">
-          Let’s Make It Happen
+          Let&apos;s Make It Happen
         </h2>
 
         {/* Info Cards */}

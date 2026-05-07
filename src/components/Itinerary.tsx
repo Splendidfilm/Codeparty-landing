@@ -106,28 +106,21 @@ Room D – Storytelling & Animation
       "Teams present solutions developed before the event. Top teams advance to finals.",
   },
   {
-    time: "12:10 PM - 12:40 PM",
-    title: "Refreshment Break",
-    description:
-      "Relax, recharge, and network with fellow participants and mentors",
-    tag: "Break",
-  },
-  {
-    time: "12:40 PM - 1:25 PM",
-    title: "Gaming Tournament",
-    description:
-      "45 mins • Virtual games • Only registered schools can participate",
-    tag: "Competitive",
-    room: "Gaming Zone",
-  },
-  {
-    time: "1:30 PM - 2:50 PM",
+    time: "12:10 PM - 1:30 PM",
     title: "Tech Talks",
     description: "4 × 20 mins",
     speaker: "Guest Speakers",
     room: "Main Stage",
     details:
       "Short, high-impact talks focused on tech, creativity, and innovation.",
+  },
+  {
+    time: "1:30 PM - 3:25 PM",
+    title: "Refreshment Break & Gaming Tournament",
+    description:
+      "Relax, recharge, and network with fellow participants and mentors. Followed by 45 mins • Virtual games • Only registered schools can participate",
+    tag: "Break & Competitive",
+    room: "Gaming Zone",
   },
   {
     time: "2:50 PM - 3:20 PM",

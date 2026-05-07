@@ -17,13 +17,13 @@ function App() {
       <Navbar />
       <Hero />
       <Journey />
+      <Sponsors/>
       <Storyline />
       <ForParents />
-      <PastEvents />
       <ForSchools />
       <Itinerary />
-      <Sponsors/>
       <EventDetails />
+      <PastEvents />
       <Footer />
       
     </div>

@@ -8,49 +8,49 @@ type EventType = {
 
 const events: EventType[] = [
   {
-    year: "May 2022 • Jos",
+    year: "MAY • Jos, Plateau State",
     comment:
-      "Our very first gathering of curious minds in Jos city. A day filled with laughter, learning, and the spark of creativity that ignited our journey.",
+      "From our humble beginnings in 2022 to our latest gathering in 2024, each year has been a chapter filled with laughter, learning, and unforgettable moments. Dive into our visual journey and relive the magic of past CodeParty events.",
     images: [
+      "/images/2024/Main.jpg",
+      "/images/2024/1.jpg",
+      "/images/2024/16.jpg",
+      "/images/2024/2.jpg",
+      "/images/2024/3.jpg",
+      "/images/2024/4.jpg",
+      "/images/2022/IMG_20220527_144522.webp",
+      "/images/2024/5.jpg",
+      "/images/2022/bashjpg.jpg",
+      "/images/2024/6.jpg",
+      "/images/2024/7.jpg",
+      "/images/2024/9.jpg",
+      "/images/2024/10.jpg",
+      "/images/2024/11.jpg",
       "/images/2022/IMG_20220527_115139.webp",
+      "/images/2024/12.jpg",
+      "/images/2024/13.jpg",
+      "/images/2024/14.jpg",
+      "/images/2022/IMG_20220527_140012.webp",
+      "/images/2024/15.jpg",
+      "/images/2024/28.jpg",
+      "/images/2024/16.jpg",
+      "/images/2024/17.jpg",
+      "/images/2022/IMG_20220527_115318.webp",
+      "/images/2024/18.jpg",
+      "/images/2024/19.jpg",
+      "/images/2022/IMG_20220527_144903.webp",
+      "/images/2024/20.jpg",
+      "/images/2024/21.jpg",
+      "/images/2022/IMG_20220527_145305.webp",
+      "/images/2024/22.jpg",
+      "/images/2024/23.jpg",
       "/images/2022/Copy of IMG_20220527_134206.webp",
       "/images/2022/IMG_20220527_115210.webp",
-      "/images/2022/IMG_20220527_115318.webp",
-      "/images/2022/IMG_20220527_140012.webp",
-      "/images/2022/IMG_20220527_144522.webp",
-      "/images/2022/IMG_20220527_144903.webp",
-      "/images/2022/IMG_20220527_145305.webp",
-    ],
-  },
-  {
-    year: "May 2023 • Jos",
-    comment:
-      "The Gateway to Infinite Possibilities. A day of digital inclusion...",
-    images: [
-      "/images/2022_img(group).jpg",
-      "/images/2023_img1.jpg",
-      "/images/2023_img2.jpg",
-    ],
-  },
-  {
-    year: "May 2024 • Jos",
-    comment:
-      "Launched dedicated AI-assisted creative stations for kids...",
-    images: [
-      "/images/2022_img(group).jpg",
-      "/images/2024_img1.jpg",
-      "/images/2022_img(group).jpg",
-      "/images/2024_img2.jpg",
-    ],
-  },
-  {
-    year: "May 2025 • Jos",
-    comment:
-      "Starting Jos Early. A day of digital leverage...",
-    images: [
-      "/images/2022_img(group).jpg",
-      "/images/2025_img1.jpg",
-      "/images/2025_img2.jpg",
+      "/images/2024/26.jpg",
+      "/images/2024/27.jpg",
+      "/images/2024/24.jpg",
+      "/images/2024/25.jpg",
+
     ],
   },
 ];
@@ -73,10 +73,10 @@ export default function PastEvents() {
       <div className="max-w-6xl mx-auto px-6">
 
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-3">
-            Past CodeParty Moments
+          <h2 className="text-4xl font-bold text-brand-green mb-3">
+           Gallery: <span className=" text-zinc-800 text-3xl" >Past CodeParty Moments</span> 
           </h2>
-          <p className="text-zinc-500">
+          <p className="text-zinc-500 text-xl ">
             A visual journey through the years
           </p>
         </div>
@@ -87,8 +87,8 @@ export default function PastEvents() {
             <div key={index}>
 
               {/* YEAR */}
-              <div className="mb-6">
-                <h3 className="text-2xl font-semibold text-gray-900">
+              <div className="mb-6 space-y-5">
+                <h3 className="text-2xl font-semibold text-brand-green   ">
                   {event.year}
                 </h3>
                 <p className="text-zinc-500 max-w-2xl">
@@ -108,7 +108,7 @@ export default function PastEvents() {
                         setSelectedEvent(event);
                         setCurrentIndex(i);
                       }}
-                      className={`relative overflow-hidden rounded-2xl cursor-pointer group
+                      className={`relative overflow-hidden rounded-2xl cursor-pointer  group
                         ${isLarge ? "col-span-2 row-span-2" : ""}
                       `}
                     >
@@ -148,9 +148,9 @@ export default function PastEvents() {
                     : prev - 1
                 )
               }
-              className="absolute left-6 text-white text-4xl bg-black/50 px-3 py-1 rounded-xl"
+              className="absolute left-6 text-white text-4xl bg-black/50 px-3 py-1 rounded-xl material-symbols-outlined active:scale-95 transition-all "
             >
-              ‹
+              arrow_left
             </button>
 
             {/* IMAGE */}
@@ -167,9 +167,9 @@ export default function PastEvents() {
                   (prev + 1) % selectedEvent.images.length
                 )
               }
-              className="absolute right-6 text-white text-4xl bg-black/50 px-3 py-1 rounded-xl"
+              className="absolute right-6 text-white text-4xl bg-black/50 px-3 py-1 rounded-xl material-symbols-outlined active:scale-95 transition-all  "
             >
-              ›
+              arrow_right
             </button>
           </div>
         )}

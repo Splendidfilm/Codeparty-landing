@@ -6,12 +6,26 @@ interface Sponsor {
   logo: string;
 }
 
+// interface Partner {
+//   name: string;
+//   logo: string;
+// }
+
+// const partners: Partner[] = [
+//   { name: 'Harvard University', logo: '/images/sponsors/harvard-university.png' },
+//   { name: 'Stanford University', logo: '/images/sponsors/stanford.png' },
+//   { name: 'Machine Learning', logo: '/images/sponsors/Machine.png' },
+//   { name: 'Scratch', logo: '/images/sponsors/scratch.webp' },
+//   { name: 'Google', logo: '/images/sponsors/google.png' },
+//   { name: 'Godot', logo: '/images/sponsors/godot.png' },
+// ];
+
 const sponsors: Sponsor[] = [
-  { name: 'Harvard University', logo: '/images/harvard-university.png' },
-  { name: 'Better Earth Foundation', logo: '/images/betterEarth.jpg' },
-  { name: 'Stanford University', logo: '/images/stanford.png' },
-  { name: 'CSFirst', logo: '/Logo.png' },
-  { name: 'Google', logo: '/images/google.png' },
+  { name: 'ESC', logo: '/images/sponsors/ennopng.png' },
+  { name: 'netaccess', logo: '/images/sponsors/net.png' },
+  { name: 'Code for Africa', logo: '/images/sponsors/JOA LOGO.png' },
+  { name: 'Better earth foundation', logo: '/images/sponsors/betterearth.png' },
+  { name: 'ESC', logo: '/images/sponsors/esc.jfif' },
 ];
 
 export default function Sponsors() {
@@ -41,10 +55,43 @@ export default function Sponsors() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.05 }}
               viewport={{ once: true }}
+              className="group flex flex-col items-center justify-center gap-6 w-full max-w-[260px]"
+            >
+              <div className="relative w-44 h-44 md:w-52 md:h-52 lg:w-56 lg:h-56 flex items-center justify-center 
+                               rounded-3xl transition-all duration-300 overflow-hidden ">
+                <img
+                  src={sponsor.logo}
+                  alt={`${sponsor.name} logo`}
+                  className="w-40 h-40 md:w-48 md:h-48 lg:w-52 lg:h-52 object-contain transition-all duration-500"
+                />
+              </div>
+            </motion.div>
+          ))}
+
+          <div>
+
+          </div>
+        </div>
+      {/* <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-4xl md:text-6xl font-semibold text-zinc-900 my-6"
+        >
+          Global Affiliation & Industrial Partnership
+        </motion.h2>
+
+          <div className="mt-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-8 gap-y-16 items-center justify-items-center">
+          {partners.map((sponsor, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.05 }}
+              viewport={{ once: true }}
               whileHover={{ scale: 1.05, y: -8 }}
               className="group flex flex-col items-center justify-center gap-6 w-full max-w-[260px]"
             >
-              {/* Extra Large Logo Container */}
               <div className="relative w-44 h-44 md:w-52 md:h-52 lg:w-56 lg:h-56 flex items-center justify-center 
                                rounded-3xl border border-zinc-100 
                               group-hover:border-brand-green/30 transition-all duration-300 overflow-hidden shadow-sm">
@@ -55,13 +102,14 @@ export default function Sponsors() {
                 />
               </div>
 
-              {/* Bold Name */}
-              {/* <p className="text-base md:text-lg font-semibold text-zinc-800 text-center leading-tight tracking-tight px-4">
-                {sponsor.name}
-              </p> */}
             </motion.div>
           ))}
-        </div>
+
+          <div>
+
+          </div>
+        </div> */}
+          
       </div>
     </section>
   );
