@@ -35,4 +35,5 @@ body {
 .hero_bg{
   background-image: url('/public/images/matthew-henry-VviFtDJakYk-unsplash.jpg'), linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
   background-repeat: no-repeat;
+  background-position: center;
 }

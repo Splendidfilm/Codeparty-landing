@@ -13,7 +13,7 @@ const events: EventType[] = [
       "From our humble beginnings in 2022 to our latest gathering in 2024, each year has been a chapter filled with laughter, learning, and unforgettable moments. Dive into our visual journey and relive the magic of past CodeParty events.",
     images: [
       "/images/2024/Main.jpg",
-      "/images/2024/1.jpg",
+      // "/images/2024/1.jpg",
       "/images/2024/16.jpg",
       "/images/2024/2.jpg",
       "/images/2024/3.jpg",
@@ -73,8 +73,8 @@ export default function PastEvents() {
       <div className="max-w-6xl mx-auto px-6">
 
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-brand-green mb-3">
-           Gallery: <span className=" text-zinc-800 text-3xl" >Past CodeParty Moments</span> 
+          <h2 className="  text-4xl font-bold text-brand-green mb-3">
+           Gallery: <span className=" font-serif text-zinc-800 text-3xl" >Past CodeParty Moments</span> 
           </h2>
           <p className="text-zinc-500 text-xl ">
             A visual journey through the years

@@ -28,7 +28,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity:1, y: 0 }}
           transition={{ ease:'easeInOut', duration:1.5 }}
-          className=" text-7xl md:text-9xl  text-center items-center font-['Bebas_Neue'] font-semibold text-[72px] leading-[0.95] text-white tracking-wider mt-6 " >
+          className=" text-7xl md:text-9xl  text-center items-center font-['Bebas_Neue'] font-semibold text-[72px] leading-[0.95] text-white tracking-wider mt-6 uppercase " >
             The Civic<br />Miracle
           </motion.h1>
 

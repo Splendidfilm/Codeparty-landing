@@ -37,12 +37,12 @@ export default function Sponsors() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-5xl md:text-6xl font-semibold text-brand-green mb-4"
+          className="text-5xl md:text-6xl font-semibold text-brand-green mb-4 font-serif "
         >
           Our Sponsors
         </motion.h2>
 
-        <p className="text-lg text-zinc-600 max-w-2xl mx-auto">
+        <p className="text-lg text-zinc-600 max-w-2xl font-serif mx-auto">
           Those who have fostered our efforts and made this journey possible.
         </p>
 

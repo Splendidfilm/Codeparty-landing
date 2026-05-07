@@ -24,15 +24,15 @@ export default function ForParents() {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="font-display text-brand-green text-6xl md:text-8xl tracking-tight mb-6">
+          <h2 className="font-serif text-brand-green text-6xl md:text-8xl tracking-tight mb-6">
             To the Parents
           </h2>
           
           <div className="max-w-2xl mx-auto space-y-3">
-            <p className="text-brand-green/90 text-2xl md:text-4xl font-light">
+            <p className=" font-serif text-brand-green/90 text-2xl md:text-4xl font-light">
               Raising the Architects of Tomorrow
             </p>
-            <p className="text-zin-100 text-xl md:text-3xl">
+            <p className="text-zin-100 text-xl md:text-3xl font-serif ">
               Moving from <span className="line-through opacity-50">Screen-Time</span> to{" "}
               <span className="text-accent-yellow font-medium">Solution-Time</span>.
             </p>

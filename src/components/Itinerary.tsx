@@ -151,7 +151,7 @@ export default function EventSchedule() {
     <section className=" w-full py-20 bg-gray-50">
       <div className="max-w-4xl mx-auto px-6">
 
-        <h2 className="text-5xl md:text-6xl font-bold mb-10 text-center text-brand-green">
+        <h2 className="font-serif text-5xl md:text-6xl font-bold mb-10 text-center text-brand-green">
           Event Schedule
         </h2>
 
@@ -184,7 +184,7 @@ export default function EventSchedule() {
                     <p className="text-sm text-brand-green font-semibold">
                       {item.time}
                     </p>
-                    <h3 className="text-lg font-bold text-gray-800">
+                    <h3 className=" text-lg font-bold text-gray-800">
                       {item.title}
                     </h3>
                   </div>
