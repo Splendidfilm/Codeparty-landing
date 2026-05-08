@@ -9,7 +9,7 @@ export default function EventDetails() {
 
   return (
     <section className="bg-white dark:bg-zinc-950 py-24 md:py-32 px-6 md:px-12 lg:px-20 w-full ">
-      <div className="max-w-5xl mx-auto text-center">
+      <div className="w-full mx-auto text-center">
         
         {/* Badge */}
         <motion.div
@@ -70,11 +70,11 @@ export default function EventDetails() {
           </motion.div>
         </div>
 
-
-<section className="relative flex flex-col items-center overflow-hidden rounded-3xl  py-14 px-4">
+{/* CTA */}
+<section className="relative flex flex-col items-center overflow-hidden rounded-3xl w-full  py-14">
 
   {/* Background pattern */}
-  <div className="absolute inset-0 circuit-pattern opacity-70 pointer-events-none" />
+  {/* <div className="absolute inset-0 circuit-pattern opacity-70 pointer-events-none" /> */}
 
   {/* Card */}
   <div className="relative z-10 flex flex-col items-center gap-6 w-full max-w-xl rounded-3xl  backdrop-blur-lg border border-zinc-200 p-10">

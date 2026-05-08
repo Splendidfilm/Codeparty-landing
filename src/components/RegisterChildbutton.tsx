@@ -10,13 +10,13 @@ export default function RegisterChildButton() {
         whileTap={{ scale: 0.93 }}
         transition={spring}
         className="
-          group flex items-center gap-3
+          group flex items-center gap-6
           bg-green-600 hover:bg-green-600 text-white
-          font-extrabold text-lg md:text-xl
+          font-extrabold text-base md:text-xl
           px-9 py-[18px] rounded-[20px]
           shadow-[0_6px_0_#15803d,0_8px_20px_rgba(22,163,74,0.35)]
           font-['Nunito'] tracking-tight
-          border-none transition-colors
+          border-none transition-colors text-
         "
       >
         Register My Child
