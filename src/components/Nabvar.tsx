@@ -112,7 +112,7 @@ export default function Navbar() {
               ))}
 
               {/* Mobile CTA */}
-             <div className=" items-center justify-center rounded-xl mt-6 p-4 flex flex-col gap-4  ">
+             <div className=" w-full items-center justify-center rounded-xl mt-6 p-4 flex flex-col gap-4  ">
               <RegisterChildutton/>
               <RegisterSchoolbutton/>
              </div>
