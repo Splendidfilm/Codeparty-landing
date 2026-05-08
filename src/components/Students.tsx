@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { motion, useAnimationControls } from 'framer-motion'
 
 interface Student {
   name: string;
@@ -15,21 +15,54 @@ const students: Student[] = [
   { name: 'John Doe', img: '/images/Students/hero.png', role: 'Frontend Developer' },
   { name: 'John Doe', img: '/images/Students/hero.png', role: 'Frontend Developer' },
   { name: 'John Doe', img: '/images/Students/hero.png', role: 'Frontend Developer' },
-
 ]
 
-// const cardVariants = {
-//   hidden: { opacity: 0, y: 30 },
-//   visible: (i: number) => ({
-//     opacity: 1,
-//     y: 0,
-//     transition: { delay: i * 0.1, duration: 0.5, ease: 'easeOut' },
-//   }),
-// }
+const marqueeStudents = [...students, ...students]
+
+function StudentCard({ student }: { student: Student }) {
+  return (
+    <div className="group flex flex-col items-center text-center gap-3 p-4 rounded-2xl border border-zinc-100 hover:border-brand-green/20 hover:shadow-lg hover:shadow-brand-green/10 transition-all duration-300 bg-white">
+      
+      {/* Top accent border */}
+      <div className="w-full h-1 rounded-full bg-brand-green/20 group-hover:bg-brand-green transition-all duration-300" />
+
+      {/* Image */}
+      <div className="w-full aspect-square overflow-hidden rounded-xl border border-zinc-100 group-hover:border-brand-green/30 transition-all duration-300">
+        <img
+          src={student.img}
+          alt={student.name}
+          loading="lazy"
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+        />
+      </div>
+
+      {/* Info */}
+      <div className="flex flex-col gap-2 w-full">
+        <h3 className="font-extrabold text-base text-zinc-800 font-['Nunito'] leading-tight">
+          {student.name}
+        </h3>
+        <span className="font-semibold text-brand-green bg-green-50 px-3 py-1.5 rounded-full font-['Nunito'] text-sm w-fit mx-auto">
+          {student.role}
+        </span>
+      </div>
+    </div>
+  )
+}
 
 export default function Students() {
+  const controls = useAnimationControls()
+
+  const startMarquee = () => {
+    controls.start({
+      x: ['0%', '-50%'],
+      transition: { duration: 30, ease: 'linear', repeat: Infinity },
+    })
+  }
+
+  const stopMarquee = () => controls.stop()
+
   return (
-    <section className="w-full py-16 md:py-24 bg-white">
+    <section className="w-full py-16 md:py-24 bg-white overflow-hidden">
       <div className="max-w-6xl mx-auto px-6">
 
         {/* Header */}
@@ -59,47 +92,50 @@ export default function Students() {
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
             viewport={{ once: true }}
-            className="mt-5 text-brand-green/70 text-lg md:text-xl italic font-serif max-w-xl"
+            className="mt-5 text-brand-green/70 text-base md:text-lg italic font-serif max-w-xl"
           >
             Meet our kids who are making the magic happen behind the scenes.
           </motion.p>
         </div>
-
-        {/* Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {students.map((student, index) => (
-            <motion.div
-              key={index}
-              custom={index}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-            //   variants={cardVariants}
-              whileHover={{ y: -6, transition: { type: 'spring', stiffness: 300, damping: 15 } }}
-              className="group flex flex-col items-center text-center gap-3 p-5 rounded-2xl border border-zinc-100 hover:border-brand-green/20 hover:shadow-lg hover:shadow-brand-green/10 transition-all duration-300 bg-white"
-            >
-              {/* Avatar */}
-<div className="w-full aspect-square overflow-hidden rounded-2xl border border-zinc-100 group-hover:border-brand-green/30 transition-all duration-300">
-  <img
-    src={student.img}
-    alt={student.name}
-    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-  />
-</div>
-              {/* Info */}
-              <div className="flex flex-col gap-1">
-                <h3 className="font-extrabold text-lg md:text-base lg:text-lg text-zinc-800 font-['Nunito'] leading-tight">
-                  {student.name}
-                </h3>
-                <span className=" font-semibold text-brand-green bg-green-50 px-3 py-1 rounded-full font-['Nunito'] text-sm lg:text-base ">
-                  {student.role}
-                </span>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-
       </div>
+
+      {/* Mobile: 2-col static grid */}
+      <div className="md:hidden grid grid-cols-2 gap-4 px-4">
+        {students.map((student, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.08, duration: 0.4 }}
+            viewport={{ once: true }}
+          >
+            <StudentCard student={student} />
+          </motion.div>
+        ))}
+      </div>
+
+      {/* Desktop: marquee */}
+      <div className="relative hidden md:flex overflow-hidden">
+
+        {/* Fade edges */}
+        <div className="absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+
+        <motion.div
+          className="flex gap-6 items-stretch"
+          animate={controls}
+          onViewportEnter={startMarquee}
+          onMouseEnter={stopMarquee}
+          onMouseLeave={startMarquee}
+        >
+          {marqueeStudents.map((student, index) => (
+            <div key={index} className="flex-shrink-0 w-52">
+              <StudentCard student={student} />
+            </div>
+          ))}
+        </motion.div>
+      </div>
+
     </section>
   )
 }
