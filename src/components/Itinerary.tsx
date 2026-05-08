@@ -148,7 +148,7 @@ export default function EventSchedule() {
   };
 
   return (
-    <section className=" w-full py-20 bg-gray-50">
+    <section id="itinerary" className=" w-full py-20 bg-gray-50">
       <div className="max-w-4xl mx-auto px-6">
 
         <h2 className="font-serif text-5xl md:text-6xl font-bold mb-10 text-center text-brand-green">
