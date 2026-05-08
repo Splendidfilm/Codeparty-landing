@@ -9,7 +9,7 @@ import EventDetails from './components/EventDetails';
 import Footer from './components/Footer';
 import PastEvents from './components/PastEvents';
 import Sponsors from './components/Sponsors';
-import Students from './components/Students';
+// import Students from './components/Students';
 
 
 function App() {

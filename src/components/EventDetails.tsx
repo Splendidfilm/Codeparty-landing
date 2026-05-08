@@ -83,7 +83,7 @@ export default function EventDetails() {
   
 
     {/* Buttons */}
-    <div className="flex flex-colitems-center gap-4 w-full justify-center  ">
+    <div className="flex flex-col items-center gap-4 w-full justify-center  ">
       <RegisterChildButton />
       <RegisterSchoolButton />
     </div>
