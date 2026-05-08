@@ -112,7 +112,7 @@ export default function Navbar() {
               ))}
 
               {/* Mobile CTA */}
-             <div className=" bg-black/75 border border-zinc-200 rounded-xl mt-6 p-4 flex flex-row gap-4  ">
+             <div className="  rounded-xl mt-6 p-4 flex flex-row gap-4  ">
               <RegisterChildutton/>
               <RegisterSchoolbutton/>
              </div>

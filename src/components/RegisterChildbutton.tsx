@@ -1,19 +1,29 @@
-// import { useState } from "react";
-// import RegistrationModal from "./RegisterModal";
-import { motion } from "framer-motion";
+import { motion, type Transition } from "framer-motion";
 
+const spring: Transition = { type: "spring", stiffness: 400, damping: 15 };
 
 export default function RegisterChildButton() {
-  // const [modalType, setModalType] = useState<'child' | 'school' | null>(null);
-  // https://forms.gle/Sz2FgvX74ASnDN6i9
-
   return (
-
     <a href="https://forms.gle/MFkwSxC5jLsB99g97" target="_blank" rel="noopener noreferrer">
-    <motion.button
-              
-              className=" bg-brand-green hover:bg-emerald-700 text-white font-semibold text-lg md:text-xl px-14 py-6 rounded-2xl   transition-all shadow-lg  flex-1 t active:scale-90  group flex items-center justify-center gap-3 bg-white/10 border border-zinc-200 backdrop-blur-m font-['DM_Sans']  ">
-              Register My Child <span className="material-symbols-outlined group-hover:translate-x-3 transition-all text-2xl " >trending_flat</span>
-            </motion.button>
-            </a>                  
-)}
+      <motion.button
+        whileHover={{ y: -3, scale: 1.04 }}
+        whileTap={{ scale: 0.93 }}
+        transition={spring}
+        className="
+          group flex items-center gap-3
+          bg-green-600 hover:bg-green-600 text-white
+          font-extrabold text-lg md:text-xl
+          px-9 py-[18px] rounded-[20px]
+          shadow-[0_6px_0_#15803d,0_8px_20px_rgba(22,163,74,0.35)]
+          font-['Nunito'] tracking-tight
+          border-none transition-colors
+        "
+      >
+        Register My Child
+        <span className="material-symbols-outlined text-2xl transition-transform group-hover:translate-x-1.5">
+          arrow_forward
+        </span>
+      </motion.button>
+    </a>
+  );
+}

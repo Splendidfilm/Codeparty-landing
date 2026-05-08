@@ -18,7 +18,7 @@ export default function Journey() {
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="font-serif text-4xl md:text-5xl lg:text-[54px] font-semibold leading-tight text-brand-green"
+            className="font-serif text-3xl md:text-5xl lg:text-[54px] font-semibold leading-tight text-brand-green"
           >
             Our Journey to{" "}
             <span className="italic relative inline-block text-accent-yellow">

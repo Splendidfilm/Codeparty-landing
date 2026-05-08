@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 // import { useState } from "react";
 // import RegistrationModal from "./RegisterModal";
-import RegisterChildModal from "./RegisterChildbutton";
-import RegisterSchoolModal from "./RegisterSchoolbutton";
+import RegisterChildButton from "./RegisterChildbutton";
+import RegisterSchoolButton from "./RegisterSchoolbutton";
 
 export default function EventDetails() {
 // const [modalType, setModalType] = useState<"child" | "school" | null>(null);
@@ -70,22 +70,35 @@ export default function EventDetails() {
           </motion.div>
         </div>
 
-        {/* CTA Buttons + Note */}
-        <div className="relative flex flex-col items-center gap-6 bg-black/50 py-10 overflow-hidden rounded-3xl  ">
 
-             <div className="absolute inset-0 circuit-pattern opacity-70 pointer-events-none bg-black h-full " />
-       <div className=" space-y-4 rounded-3xl bg-white/10 backdrop-blur-lg border border-white/20 dark:border-white/5 p-8  w-4/5 flex flex-col items-center justify-around">
+<section className="relative flex flex-col items-center overflow-hidden rounded-3xl  py-14 px-4">
 
-              <div className="flex md:flex-row items-center flex-col gap-4 w-full justify-around">
-                <RegisterChildModal/>
-                <RegisterSchoolModal/>
-              </div>
+  {/* Background pattern */}
+  <div className="absolute inset-0 circuit-pattern opacity-70 pointer-events-none" />
 
-              <p className="text-zinc-50 dark:text-zinc-400 text-sm max-w-xs">
-                Early bird registration is now open for both families and schools
-          </p>
-       </div>
-        </div>
+  {/* Card */}
+  <div className="relative z-10 flex flex-col items-center gap-6 w-full max-w-xl rounded-3xl  backdrop-blur-lg border border-zinc-200 p-10">
+
+    {/* Heading */}
+  
+
+    {/* Buttons */}
+    <div className="flex flex-col md:flex-row items-center gap-4 w-full justify-center  ">
+      <RegisterChildButton />
+      <RegisterSchoolButton />
+    </div>
+      <div className="flex flex-col items-center gap-1 text-center">
+      <h2 className="text-white font-extrabold text-2xl md:text-3xl font-['Nunito'] tracking-tight">
+        Join the programme
+      </h2>
+      <p className="text-zinc-500 text-base max-w-xs">
+        Early bird registration is now open for families and schools
+      </p>
+    </div>
+
+  </div>
+</section>
+       
       </div>
     </section>
   );

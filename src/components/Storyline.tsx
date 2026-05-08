@@ -30,7 +30,7 @@ export default function Storyline() {
                   <span className="material-symbols-outlined text-3xl text-zinc-900">auto_awesome</span>
                 </div>
                 <div>
-                  <p className="font-semibold text-lg dark:text-white">Super Human</p>
+                  <p className="font-semibold text-base md:text-lg dark:text-white">Super Human</p>
                   <p className="text-sm text-zinc-500 dark:text-zinc-400">× Super Machine</p>
                 </div>
               </div>
@@ -49,7 +49,7 @@ export default function Storyline() {
               The Future Isn&apos;t Just Automated—<span className="text-accent-yellow">It&apos;s Inspired.</span>
             </h2>
 
-            <div className="space-y-6 text-xl text-zinc-700 dark:text-zinc-300 leading-relaxed">
+            <div className="space-y-6 text-base md:text-xl text-zinc-700 dark:text-zinc-300 leading-relaxed">
               <p>
                 For four years, we’ve coded, played, and innovated. For our 5th anniversary, 
                 we are asking a big question: What happens when the brilliance of a child 
@@ -73,7 +73,7 @@ export default function Storyline() {
               transition={{ delay: 0.3 }}
               className="p-8 bg-zinc-100 dark:bg-zinc-900/70 border-l-4 border-accent-yellow rounded-3xl"
             >
-              <p className="italic text-2xl leading-relaxed text-zinc-700 dark:text-zinc-200">
+              <p className="italic text-lg md:text-2xl leading-relaxed text-zinc-700 dark:text-zinc-200">
                 "When we give a child a keyboard, we aren&apos;t just teaching syntax; we are giving them 
                 the wand to cast digital spells that solve real-world problems."
               </p>
