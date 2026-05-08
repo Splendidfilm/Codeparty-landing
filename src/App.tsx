@@ -22,7 +22,7 @@ function App() {
       <Storyline />
       <ForParents />
       <ForSchools />
-      <Students/>
+      {/* <Students/> */}
       <Itinerary />
       <EventDetails />
       <PastEvents />

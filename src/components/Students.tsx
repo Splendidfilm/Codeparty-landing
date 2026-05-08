@@ -24,7 +24,7 @@ function StudentCard({ student }: { student: Student }) {
     <div className="group flex flex-col items-center text-center gap-3 p-4 rounded-2xl border border-zinc-100 hover:border-brand-green/20 hover:shadow-lg hover:shadow-brand-green/10 transition-all duration-300 bg-white">
       
       {/* Top accent border */}
-      <div className="w-full h-1 rounded-full bg-brand-green/20 group-hover:bg-brand-green transition-all duration-300" />
+      <div className="w-full h-1 rounded-full bg-accent-yellow/20 group-hover:bg-accent-yellow transition-all duration-300" />
 
       {/* Image */}
       <div className="w-full aspect-square overflow-hidden rounded-xl border border-zinc-100 group-hover:border-brand-green/30 transition-all duration-300">
