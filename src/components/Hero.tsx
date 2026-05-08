@@ -101,8 +101,8 @@ export default function Hero() {
           {/* CTA Buttons */}
 
             <div className=" flex md:flex-row flex-col gap-6 w-full justify-center items-center">
-      <RegisterSchoolButton/>
       <RegisterChildbutton/>
+      <RegisterSchoolButton/>
             </div>
   </div>
     </header>
