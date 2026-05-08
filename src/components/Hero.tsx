@@ -17,7 +17,7 @@ export default function Hero() {
       <div className="absolute inset-0 circuit-pattern opacity-30 pointer-events-none bg-black h-full" />
       
 
-  <div className=" relative w-full mx-auto flex flex-col gap-16 lg:gap-20 items-center justify-center">
+  <div className=" relative w-full mx-4 flex flex-col gap-16 lg:gap-20 items-center justify-center">
         <div className=" w-full mx-auto flex flex-col  items-center  justify-center  ">
         
         {/* Left Content */}
@@ -41,11 +41,11 @@ export default function Hero() {
 
          {/* Tagline */}
       <p className="font-['Lora'] text-[22px] text-center text-white/85 mt-6">
-        Where little hands build <span className="text-[#e8a020] italic relative inline-block after:absolute after:bottom-[-3px] after:left-0 after:w-full after:h-[2px] after:bg-white/30 text- text-shadow-xs ">“Big Miracles.”</span>
+        Where little hands build <br/> <span className="text-[#e8a020] italic relative inline-block after:absolute after:bottom-[-3px] after:left-0 after:w-full after:h-[2px] after:bg-white/30 text- text-shadow-xs ">“Big Miracles.”</span>
       </p>
 
       {/* Subtitle */}
-      <p className="font-['Lora'] text-center italic text-white/75 max-w-[420px] leading-relaxed mt-6 text-lg md:text-2xl ">
+      <p className="font-['Lora'] text-center italic text-white/75 max-w-[420px] leading-relaxed mt-6 text-base md:text-2xl ">
         Celebrate Children&apos;s Day at the <br/> <strong className="font-semibold not-italic text-[#2d7a45]  ">5th Annual Codeplay72 CodeParty</strong>.<br />
         A day of magic, logic, and limitless imagination.
       </p>
