@@ -17,6 +17,7 @@ export default function Navbar() {
     { name: "For Parents", href: "#parents" },
     { name: "For Schools", href: "#schools" },
     { name: "Itinerary", href: "#itinerary" },
+    {name:'Students',href:'#students'}
   ];
 
   const closeMenu = (): void => setIsMenuOpen(false);

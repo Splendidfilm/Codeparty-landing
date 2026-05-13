@@ -1,39 +1,91 @@
+import { useState } from 'react';
 import { motion, useAnimationControls } from 'framer-motion'
 
 interface Student {
   name: string;
   img: string;
   role: string;
+  badgeLogos: string[];
 }
 
 const students: Student[] = [
-  { name: 'John Doe', img: '/images/Students/hero.png', role: 'Frontend Developer' },
-  { name: 'John Doe', img: '/images/Students/hero.png', role: 'Frontend Developer' },
-  { name: 'John Doe', img: '/images/Students/hero.png', role: 'Frontend Developer' },
-  { name: 'John Doe', img: '/images/Students/hero.png', role: 'Frontend Developer' },
-  { name: 'John Doe', img: '/images/Students/hero.png', role: 'Frontend Developer' },
-  { name: 'John Doe', img: '/images/Students/hero.png', role: 'Frontend Developer' },
-  { name: 'John Doe', img: '/images/Students/hero.png', role: 'Frontend Developer' },
-  { name: 'John Doe', img: '/images/Students/hero.png', role: 'Frontend Developer' },
+  { name: 'Blessing  ', img: '/images/Students/blessing.png', role: 'BlockBuilder (Scratch)', badgeLogos: [  '/images/badges/scratch.webp','/images/badges/Machine.png'] },
+  { name: 'David ', img: '/images/Students/bobo.png', role: 'CreativeSpark (Scratch)', badgeLogos: [  '/images/badges/Machine.png', '/images/badges/scratch.webp',] },
+  
+  { name: 'Brayin ', img: '/images/Students/jj.png', role: 'CreativeSpark (Scratch)', badgeLogos: [  '/images/badges/Machine.png', '/images/badges/scratch.webp',] },
+  
+    { name: 'Rhoda', img: '/images/Students/rhoda.jpg', role: 'CreativeSpark (Scratch)', badgeLogos: [  '/images/badges/Machine.png', '/images/badges/scratch.webp',] },
+  
+  { name: 'Aaron', img: '/images/Students/Aaron.jpg', role: 'Frontend Developer', badgeLogos: [ '/images/badges/Machine.png', '/images/badges/scratch.webp','/images/badges/vscode.png'] },
+  
+  { name: 'Deborah ', img: '/images/Students/debbie.png', role: 'Frontend Developer', badgeLogos: [ '/images/badges/vscode.png', '/images/badges/Machine.png', '/images/badges/scratch.webp',] },
+
+  { name: 'Isreal  ', img: '/images/Students/Isreal.png', role: 'Frontend Developer', badgeLogos: [ '/images/badges/vscode.png', '/images/badges/Machine.png', '/images/badges/scratch.webp',] },
+  
+    { name: 'Jayden', img: '/images/Students/J.png', role: ' PixelPioneer (Scratch)', badgeLogos: [ '/images/badges/Machine.png', '/images/badges/scratch.webp',] },
+
+  { name: 'Srarina', img: '/images/Students/S.png', role: 'Frontend Developer', badgeLogos: [ '/images/badges/vscode.png', '/images/badges/Machine.png', '/images/badges/scratch.webp','/images/badges/python.png'] },
+
+  { name: 'Oluwaseyi ', img: '/images/Students/seyi.png', role: 'Game Developer', badgeLogos: [ '/images/badges/vscode.png', '/images/badges/Machine.png', '/images/badges/scratch.webp','/images/badges/unity.png'] },
+
+  { name: 'Oluwagbemi', img: '/images/Students/gbemi.png', role: 'Game Developer', badgeLogos: [ '/images/badges/vscode.png', '/images/badges/Machine.png', '/images/badges/godot.png','/images/badges/unity.png'] },
+
+  { name: 'Williams', img: '/images/Students/Williams.png', role: 'Game Developer', badgeLogos: [ '/images/badges/unity.png', '/images/badges/Machine.png', '/images/badges/scratch.webp','/images/badges/vscode.png'] },
+
+  { name: 'Jonathan  ', img: '/images/Students/Tisloh.png', role: 'Script Sorcerer (Scratch) ', badgeLogos: [ '/images/badges/Machine.png', '/images/badges/scratch.webp'] },
+
 ]
 
 const marqueeStudents = [...students, ...students]
 
 function StudentCard({ student }: { student: Student }) {
+  const [expanded, setExpanded] = useState(false)
+
   return (
     <div className="group flex flex-col items-center text-center gap-3 p-4 rounded-2xl border border-zinc-100 hover:border-brand-green/20 hover:shadow-lg hover:shadow-brand-green/10 transition-all duration-300 bg-white">
-      
+
       {/* Top accent border */}
       <div className="w-full h-1 rounded-full bg-accent-yellow/20 group-hover:bg-accent-yellow transition-all duration-300" />
 
-      {/* Image */}
-      <div className="w-full aspect-square overflow-hidden rounded-xl border border-zinc-100 group-hover:border-brand-green/30 transition-all duration-300">
+      {/* Image with stacking badges */}
+      <div className="relative w-full aspect-square overflow-hidden rounded-xl border border-zinc-100 group-hover:border-brand-green/30 transition-all duration-300">
         <img
           src={student.img}
           alt={student.name}
           loading="lazy"
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />
+
+        {/* Badge stack */}
+        <div
+          className="absolute bottom-2 right-2 flex flex-col-reverse items-center"
+          onMouseEnter={() => setExpanded(true)}
+          onMouseLeave={() => setExpanded(false)}
+          onTouchStart={() => setExpanded(prev => !prev)}
+        >
+          {student.badgeLogos.map((logo, i) => (
+            <motion.div
+              key={i}
+              animate={
+                expanded
+                  ? { y: -(i * 44), opacity: 1, scale: 1 }
+                  : { y: -(i * 6), opacity: i === 0 ? 1 : 0.6, scale: 1 - i * 0.06 }
+              }
+              transition={{ type: 'spring', stiffness: 320, damping: 22, delay: i * 0.04 }}
+              className="absolute w-9 h-9 rounded-xl bg-white shadow-md border border-zinc-100 flex items-center justify-center p-1.5"
+              style={{ zIndex: student.badgeLogos.length - i }}
+            >
+              <img
+                src={logo}
+                alt={`badge-${i}`}
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
+          ))}
+
+          {/* Invisible hit area to keep hover stable */}
+          <div className="w-9" style={{ height: `${student.badgeLogos.length * 6 + 36}px` }} />
+        </div>
       </div>
 
       {/* Info */}
@@ -62,7 +114,7 @@ export default function Students() {
   const stopMarquee = () => controls.stop()
 
   return (
-    <section className="w-full py-16 md:py-24 bg-white overflow-hidden">
+    <section id='students' className="w-full py-16 md:py-24 bg-white overflow-hidden">
       <div className="max-w-6xl mx-auto px-6">
 
         {/* Header */}
