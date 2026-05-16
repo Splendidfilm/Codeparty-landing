@@ -9,18 +9,18 @@ interface Student {
 }
 
 const students: Student[] = [
-  { name: 'Blessing  ', img: '/images/Students/blessing.png', role: 'BlockBuilder (Scratch)', badgeLogos: [  '/images/badges/scratch.webp','/images/badges/Machine.png'] },
+  { name: 'Blessing', img: '/images/Students/blessing.png', role: 'BlockBuilder (Scratch)', badgeLogos: [  '/images/badges/scratch.webp','/images/badges/Machine.png'] },
   { name: 'David ', img: '/images/Students/bobo.png', role: 'CreativeSpark (Scratch)', badgeLogos: [  '/images/badges/Machine.png', '/images/badges/scratch.webp',] },
   
-  { name: 'Brayin ', img: '/images/Students/jj.png', role: 'CreativeSpark (Scratch)', badgeLogos: [  '/images/badges/Machine.png', '/images/badges/scratch.webp',] },
+  { name: 'Brayan ', img: '/images/Students/jj.png', role: 'CreativeSpark (Scratch)', badgeLogos: [  '/images/badges/Machine.png', '/images/badges/scratch.webp',] },
   
     { name: 'Rhoda', img: '/images/Students/rhoda.jpg', role: 'CreativeSpark (Scratch)', badgeLogos: [  '/images/badges/Machine.png', '/images/badges/scratch.webp',] },
   
   { name: 'Aaron', img: '/images/Students/Aaron.jpg', role: 'Frontend Developer', badgeLogos: [ '/images/badges/Machine.png', '/images/badges/scratch.webp','/images/badges/vscode.png'] },
   
-  { name: 'Deborah ', img: '/images/Students/debbie.png', role: 'Frontend Developer', badgeLogos: [ '/images/badges/vscode.png', '/images/badges/Machine.png', '/images/badges/scratch.webp',] },
+  { name: 'Deborah', img: '/images/Students/debbie.png', role: 'Frontend Developer', badgeLogos: [ '/images/badges/vscode.png', '/images/badges/Machine.png', '/images/badges/scratch.webp',] },
 
-  { name: 'Isreal  ', img: '/images/Students/Isreal.png', role: 'Frontend Developer', badgeLogos: [ '/images/badges/vscode.png', '/images/badges/Machine.png', '/images/badges/scratch.webp',] },
+  { name: 'Isreal', img: '/images/Students/Isreal.png', role: 'Frontend Developer', badgeLogos: [ '/images/badges/vscode.png', '/images/badges/Machine.png', '/images/badges/scratch.webp',] },
   
     { name: 'Jayden', img: '/images/Students/J.png', role: ' PixelPioneer (Scratch)', badgeLogos: [ '/images/badges/Machine.png', '/images/badges/scratch.webp',] },
 
@@ -32,7 +32,7 @@ const students: Student[] = [
 
   { name: 'Williams', img: '/images/Students/Williams.png', role: 'Game Developer', badgeLogos: [ '/images/badges/unity.png', '/images/badges/Machine.png', '/images/badges/scratch.webp','/images/badges/vscode.png'] },
 
-  { name: 'Jonathan  ', img: '/images/Students/Tisloh.png', role: 'Script Sorcerer (Scratch) ', badgeLogos: [ '/images/badges/Machine.png', '/images/badges/scratch.webp'] },
+  { name: 'Jonathan', img: '/images/Students/Tisloh.png', role: 'Script Sorcerer (Scratch) ', badgeLogos: [ '/images/badges/Machine.png', '/images/badges/scratch.webp'] },
 
 ]
 
