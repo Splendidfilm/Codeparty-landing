@@ -69,7 +69,7 @@ export default function PastEvents() {
   }, [currentIndex, selectedEvent]);
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-white" id="highlights" >
       <div className="max-w-6xl mx-auto px-6">
 
         <div className="text-center mb-16">
